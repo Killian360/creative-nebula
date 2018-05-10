@@ -108,7 +108,7 @@ UpdateList()
       for (var z = 0; z < this.newlist.length; z++)
       {
         var projectbox = document.getElementById(this.newlist[z].id);
-        TweenMax.set(".projectbox",{display:'none'});
+        TweenMax.set(".ProjectWrapperMain",{display:'none'});
         TweenMax.set(projectbox,{display:'block',opacity:0.9,delay:0.1,scale:1});
       }
       TweenMax.to(".projectbox", 0.25, {onComplete:this.appearBox});
@@ -170,8 +170,8 @@ let array = this.newlist;
        TweenMax.to(projectTitle, 0.5, {x:0,y:'0%', delay:1});
        TweenMax.fromTo(subTitle, 0.3, {opacity:0,x:-100,y:'0%'},{opacity:1,x:30,y:'0',delay:0.8,ease: Power1.easeOut});
        TweenMax.to(subTitle, 0.5, {x:0,y:'0%', delay:1.1});
-       TweenMax.set('.filterCat li',{x:-100});
-       TweenMax.staggerTo('.filterCat li',0.1,{x:0, display:'block', delay:0.8},0.05);
+       TweenMax.set('.filterCat li',{x:-500});
+       TweenMax.staggerTo('.filterCat li',0.1,{x:0, display:'block', delay:0.7},0.05);
        TweenMax.to(gradientOver,0.2,{opacity:0,y:-100, ease: Power3.easeOut});
 
        window.addEventListener("resize", this.updateMargin);

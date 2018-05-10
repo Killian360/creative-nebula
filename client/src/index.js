@@ -14,7 +14,7 @@ import { CookiesProvider } from 'react-cookie';
 
 if (process.env.NODE_ENV !== 'production') {
   const {whyDidYouUpdate} = require('why-did-you-update');
-  whyDidYouUpdate(React);
+  whyDidYouUpdate(React, {exclude: [/^Connect/, /^Route/, /^Form/, /^Text/,/^Field/, /^Switch/, /^Tilt/]});
 }
 
 console.log("React version : "+React.version);

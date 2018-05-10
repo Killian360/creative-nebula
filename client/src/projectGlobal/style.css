@@ -190,7 +190,6 @@ position: relative;
   max-width:1500px;
   display:flex;
   flex-flow: row wrap;
-
 }
 
 #projectsContainer::after
@@ -244,7 +243,7 @@ position: relative;
   font-weight:400;
   font-size: 2.3em;
   padding:0 0px;
-  color:#4e5aff;
+  color:#725bf7;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   opacity:1;
@@ -255,7 +254,7 @@ position: relative;
   /* background: -webkit-linear-gradient( #ffffff 40% , rgba(247,250,250,0.5) 100% );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
-  font-size: 4.7em;
+  font-size: 5.7em;
 }
 
 .BGImg
@@ -269,6 +268,19 @@ position: relative;
   position:absolute;
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges;
+}
+
+.svgCat
+{
+  margin-right:20px;
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+}
+
+.CatTxt
+{
+  margin-left:calc(15% + 10px);
 }
 
 .viewProject
@@ -405,7 +417,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', e
   position:absolute;
   background-color: #FFF;
   opacity:0.8;
-  width:4px !important;
+  width:6px !important;
   cursor:pointer;
   transition: all 0.05s;
 }
@@ -426,7 +438,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', e
 {
   position:absolute;
   width:15%;
-  height:25%;
   top:20%;
   left:5%;
   z-index:5000;
@@ -625,7 +636,6 @@ animation: dash 5s linear infinite; */
   left:0;
   right:0;
   background-color: #222286;
-  transform: scale(0.8);
   overflow:visible;
 cursor:pointer;
 animation: all 0.2s;

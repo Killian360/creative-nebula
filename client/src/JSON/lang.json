@@ -8,7 +8,7 @@
     "subtitleAbout": "Aboutabout",
     "MenuTagClose": "close",
     "MenuTag": "Menu",
-    "cat1": "Display",
+    "cat1": "HTML",
     "cat2": "Webdesign",
     "cat3": "Newsletter",
     "backBtn": "Back"
@@ -61,22 +61,26 @@
     "SectionGenesis": {
       "TitleGenesis": "welcome",
       "BtnDownload": "Want to collaborate ?",
-      "BtnMore": "more about me",
+      "BtnMore": "learn more about me",
       "ParaphGenesis": [
         {
-          "txt": "Hi I'm Jeremy, a freelance webdesigner & developer."
+          "txt": "Hi I'm Jeremy, a self taught webdesigner & developer."
         },
         {
           "txt":
-            "I spend my time on learning single-page application development with the lastest frameworks the web as to offer and, of course, use my background as a web designer and motion designer to make things beautiful and alive."
+            "I practise <a href='https://en.wikipedia.org/wiki/Single-page_application' tabindex='-1' target='_blank'>single-page application</a> development with the lastest frameworks the web as to offer and use my years of experience as a web and motion designer to make things beautiful and alive."
         },
         {
           "txt":
-            "I work on <a href='https://reactjs.org/' tabindex='-1' target='_blank'>React</a> + <a href='https://redux.js.org/' tabindex='-1' target='_blank'>Redux</a> for the view layer. I use <a href='https://greensock.com/gsap' tabindex='-1' target='_blank'>GSAP</a> for fast and smooth animations,</br><a href='http://www.pixijs.com/' tabindex='-1' target='_blank'>PixiJS</a> for webgl effects and express for the backend"
+            "Actually focusing my studies on <a href='https://reactjs.org/' tabindex='-1' target='_blank'>ReactJS</a> the popular library from Facebook. React render only the components the interface state need with very high performance."
         },
         {
           "txt":
-            ""
+            "I tend to not limit my learnings to one specific job and extend my knowledge from front to back-end. "
+        },
+        {
+          "txt":
+            "I ultimetly want to provide immersive and meaningfull web experiences that are beautiful and effective"
         }
       ]
     },

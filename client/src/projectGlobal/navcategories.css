@@ -36,6 +36,7 @@ position: absolute;
 {
 font-size:0.9em;
 margin-left:15%;
+position:relative;
 }
 
 .filterIcon
@@ -118,7 +119,7 @@ margin-left:15%;
   opacity:1;
   transform-origin: left center;
   transition: all 0.25s;
-  animation: selection 0.55s forwards ease-out;
+  animation: selection 0.65s forwards ease-out;
 }
 
 @keyframes selection {
