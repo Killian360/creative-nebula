@@ -1,0 +1,613 @@
+
+
+
+#logoHeader
+{
+  position:fixed;
+  width:100%;
+  max-width:1000px;
+  height:100%;
+  margin:auto;
+  transform-origin: left center 0px;
+  z-index:60;
+  margin-left:0;
+  background-color: none;
+  background-repeat: no-repeat;
+  background-position: left center;
+  opacity:0;
+  left:0;
+  margin-left:3%;
+  min-height:50px !important;
+  pointer-events: none;
+}
+
+@media (min-width: 1921px) {
+  #logoHeader
+  {
+    max-width:1400px;
+  }
+}
+
+@media (max-width: 1400px) {
+  #logoHeader
+  {
+    max-width:850px;
+  }
+}
+
+@media (max-width: 1600px) {
+  #logoHeader
+  {
+    max-width:925px;
+  }
+}
+
+#projectHeader
+{
+  width:100%;
+  height:100%;
+  opacity:1;
+  z-index:2;
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+  top:0;
+}
+
+.gradient_top
+{
+  width:110%;
+  position:absolute;
+  height:50vh;
+  left:-5%;
+  top:-5%;
+  z-index:6;
+  background: linear-gradient(to bottom, #591a9a 0%,rgba(23, 5, 111, 1) 10%,rgba(57, 16, 183, 0.22) 75%,rgba(26, 35, 154, 0) 100%);
+}
+
+.gradient_bottom
+{
+  width:110%;
+  position:absolute;
+  height:50vh;
+  left:-5%;
+  bottom:-15%;
+  z-index:8;
+  background: linear-gradient(to top, rgb(34, 26, 154) 0%,rgb(34, 26, 154) 10%,rgba(117, 79, 189, 0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+.projectHeaderGradient
+{
+  width:100%;
+  position:absolute;
+  height:10%;
+  bottom:0;
+  z-index:2;
+  background-image: linear-gradient(to bottom, rgba(125,185,232,0) 0%,rgba(0,4,63,1) 100%);
+}
+
+#projectcanvas
+{
+  z-index:0}
+
+#SVGtoTop
+{
+  width:50%;
+  fill:#FFF;
+  margin:auto;
+  stroke:none;
+  min-height:30px;
+  min-width:30px;
+  max-height:40px;
+  max-width:35px;
+  padding-left:15px;
+  position:relative;
+  top:50%;
+  transform:translateY(-50%);
+  margin-left:0;
+  padding-right:15px;
+}
+
+#SVGtoTop.whiteNav
+{
+  fill:#FFF;
+  background-color:transparent;
+}
+
+
+#SVGtoTop.blueNav
+{
+  width:50%;
+  fill:#06197b;
+  margin:auto;
+  stroke:none;
+  min-height:30px;
+  min-width:30px;
+  max-height:40px;
+  max-width:35px;
+  padding-left:15px;
+  position:relative;
+  top:50%;
+  transform:translateY(-50%);
+  margin-left:0;
+  padding-right:15px;
+  background-color:transparent;
+}
+
+.SVGmenuViewer
+{
+  top:50%;
+}
+
+#logosizer
+{
+  position:absolute;
+  left:5vw;
+  height:35%;
+  width:50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height:70px !important;
+  top:25%;
+  z-index:10;
+  background-position: left center;
+  transform-origin: 0% 50%;
+  transform:translateY(-50%);
+  transition:all 0.1s ease-out;
+}
+
+@media (max-width: 1000px) {
+  #logosizer
+  {
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:auto;
+    height:35%;
+    width:100%;
+    background-size: contain;
+    top:-25%;
+    bottom:0;
+    max-width:400px;
+    background-repeat: no-repeat;
+    min-height:70px !important;
+    background-position: left center;
+    transform-origin: 0% 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  #logosizer
+  {
+    position:absolute;
+    margin:auto;
+    left:0;
+    right:0;
+    height:35%;
+    width:100%;
+    background-size: contain;
+    top:-45%;
+    bottom:0;
+    max-width:600px;
+    background-repeat: no-repeat;
+    min-height:70px !important;
+    background-position: left center;
+    transform-origin: 0% 50%;
+  }
+}
+
+#projectBG
+{
+  width:100%;
+  height:94%;
+  position:absolute;
+  z-index:1;
+  overflow:hidden;
+  opacity:1;
+}
+
+
+
+#menuNavViewer
+{
+  top:50%;
+  position:relative;
+  width:66vw;
+  margin:auto;
+  left:0;
+  right:0;
+  background-color: transparent;
+  height:100%;
+  list-style: none;
+  z-index:3;
+  display:flex;
+  flex-flow: row wrap;
+  align-items: center;
+justify-content: flex-start
+}
+
+ul
+{
+  padding:0;
+}
+
+.staggerTransition
+{
+  opacity:1;
+}
+
+@media (max-width: 1200px) {
+  .staggerTransition
+  {
+  display:none;
+  }
+}
+
+.ButtonNavViewer
+{
+  width:auto;
+  float:left;
+  background-color: transparent;
+  margin:0;
+  padding:0;
+  cursor:pointer;
+  color: #FFF;
+  position:relative;
+  top:50%;
+  font-size: 2.2em;
+  font-family: 'Radiance', sans-serif;
+  padding-left:40px;
+  padding-right:40px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.ButtonNavViewerTXT
+{
+  line-height:86px;
+}
+
+.ButtonNavViewerHome
+{
+  float:left;
+  padding-right:10px;
+  background-color: none;
+  margin:0;
+  padding:0;
+  height:10vh;
+  cursor:pointer;
+  position:fixed;
+  top:1.5vw;
+  opacity:0;
+  min-width:120px;
+  list-style: none;
+  left:5%;
+  display:none;
+  z-index:3;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+
+#projectGradient
+{
+  top:0;
+  background: rgb(1,5,56); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(1,5,56,1) 1%, rgba(0,70,84,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(1,5,56,1) 1%,rgba(0,70,84,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(1,5,56,1) 1%,rgba(0,70,84,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-size: 100% 100%;
+  animation:    radiant-highlight-bg-project 4.5s infinite;
+  width:100%;
+  height:94%;
+  position:fixed;
+}
+
+#btn_test
+{
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:55555555;
+}
+
+@keyframes radiant-highlight-bg-project {
+  0%   {   background-position:300% 100%; filter: brightness(100%)  hue-rotate(5deg);}
+  50% {    background-position:150% 100%;  filter: brightness(140%) hue-rotate(20deg)}
+  100%   { background-position:0% 100%; filter: brightness(100%)  hue-rotate(5deg); }
+}
+
+
+
+#navbarviewer
+{
+  width:100%;
+  height:10vh;
+  z-index:11;
+  background-color:#1a239a;
+  /* background-image: url(/img/UI/gradient_bar.jpg); */
+  background-size: cover;
+  padding-top:0px;
+  padding-bottom:30px;
+  max-width:1400px;
+  left:0;
+  right:0;
+  margin:auto;
+}
+
+#separatorNavView
+{
+height:0px;
+width:100%;
+top:10%;
+z-index: 3;
+position:fixed;
+display:none;
+border-bottom: 4px solid #FFF;
+}
+
+.ProjectHeadInfo
+{
+	margin-top:50px;
+  display:flex;
+  box-sizing: border-box;
+  width:100%;
+  left:0;
+  right:0;
+  position:relative;
+  margin:auto;
+  z-index:10;
+  margin-top:0;
+  max-width:1200px;
+}
+
+
+
+.ProjectDescription
+{
+  width:50%;
+  color:#e5f5ff;
+font-family: "Radiance";
+line-height:1.5;
+}
+
+.ProjectRole
+{
+  width:50%;
+  color:#e5f5ff;
+padding-left:16%;
+line-height:1.5;
+box-sizing: border-box;
+}
+
+.ProjectRole h1
+{
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-top:0;
+  color:#FFF;
+  font-size: 1.5em;
+  margin-bottom:1rem;
+  font-family: Radiance-semi;
+}
+
+.BackTagBtn.whiteNav
+{
+top:50%;
+transform:translateY(-50%);
+font-size: 2.2em;
+font-family: "Radiance";
+letter-spacing: 0.05em;
+padding-left:65px;
+position:absolute;
+color:#FFF;
+background-color: transparent;
+}
+
+.BackTagBtn.blueNav
+{
+  top:50%;
+transform:translateY(-50%);
+font-size: 2.2em;
+font-family: "Radiance";
+letter-spacing: 0.05em;
+padding-left:65px;
+position:absolute;
+background-color: transparent;
+color:#06197b;
+}
+
+
+.ProjectDescription h1
+{
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  margin-top:0;
+  font-size: 3.4em;
+  color:#FFF;
+  margin-bottom:1rem;
+  font-family: Radiance-semi;
+}
+
+.ProjectRole p
+{
+  font-weight: 300;
+  letter-spacing: .05em;
+  margin-top:0;
+  font-size: 2.2em;
+  font-family: "Radiance";
+  margin-bottom:1rem;
+}
+
+.ProjectDescription p
+{
+  font-weight: 300;
+  letter-spacing: .05em;
+  margin-top:0;
+  font-size: 2.2em;
+  font-family: "Radiance";
+}
+
+#navbarviewer--bg
+{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:10%;
+  opacity:0;
+  background-image: linear-gradient(to right, rgba(30,87,158,1) 1%,rgba(44,17,129,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  z-index:10;
+  background-size: 100% 100%;
+  transform: translateY(-100%);
+}
+
+#projectBG2
+{
+  background: #1a239a;
+  width:100%;
+  height:100%;
+  position:fixed;
+  z-index:-1;
+  opacity:1;
+}
+
+.patternCircleBar
+{
+  left: 0%;
+      position: absolute;
+      width:200%;
+      top: 0%;
+      height: 200%;
+      overflow: hidden;
+      pointer-events:none;
+}
+
+#navbarviewer--bg--static
+{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:10%;
+  opacity:0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0f0d3b+0,162938+100 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#010538+1,004654+100 */
+  background: rgb(1,5,56); /* Old browsers */
+  background: -moz-linear-gradient(left, rgba(1,5,56,1) 1%, rgba(0,70,84,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, rgba(1,5,56,1) 1%,rgba(0,70,84,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, rgba(1,5,56,1) 1%,rgba(0,70,84,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010538', endColorstr='#004654',GradientType=1 ); /* IE6-9 */
+  z-index:1;
+  background-size: 100% 100%;
+  animation:    radiant-highlight-bottom 4.5s infinite;
+}
+
+#contentViewer
+{
+  margin:auto;
+  opacity:1;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+#logoHeaderContainer
+{
+  position:fixed;
+  width:100%;
+  height:100%;
+  margin:auto;
+  left:0;
+  z-index:12;
+  top:0;
+  min-width: 130px;
+  pointer-events:none;
+}
+
+.scene--viewer {
+  padding: 0;
+  margin: 0;
+  position:absolute !important;
+  top:0%;
+  right:0;
+  width:100%;
+  height:100%;
+  top:0;
+  list-style-type: none;
+  z-index:5;
+opacity:0;
+pointer-events: none;
+}
+
+
+.view
+{
+  margin-bottom:0px !important;
+overflow-x: hidden !important;
+}
+
+#ProjectContent
+{
+  color:#FFF;
+}
+
+#ProjectContainer
+{
+  position:absolute;
+  width:100%;
+  top:calc(125vh + 200px);
+  color:#FFF;
+  background-position: 50% 0%;
+  background-repeat: repeat-x;
+  margin:auto;
+  left:0;
+  right:0;
+  min-height:1000px;
+  opacity:0;
+  z-index:2;
+  margin-top:0;
+}
+
+@media (max-width: 1000px) {
+  #ProjectContainer
+  {
+    width:80%;
+  }
+}
+
+
+#upcontentTexture
+{
+  width:100%;
+  top:0%;
+  height:25%;
+  position:absolute;
+  background-position: 50% 0%;
+  background-repeat: repeat-x;
+  min-height:100px;
+  pointer-events:none;
+}
+
+#upcontentgradient
+{
+  width:100%;
+  top:0%;
+  height:48vh;
+  /* background-image: url(/img/UI/bg_project_gradient.png); */
+  background-position: 50% 100%;
+  background-repeat: repeat-x;
+  position: relative;
+}
+
+#iframeContainer
+{
+  opacity:0;
+  background-color:#FFF;
+  margin-top:70px;
+  overflow:hidden;
+}

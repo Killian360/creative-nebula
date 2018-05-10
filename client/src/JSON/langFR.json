@@ -1,0 +1,92 @@
+{
+  "menu": {
+    "titleHome": "Accueil",
+    "subtitleHome": "genesis",
+    "Titleprojects": "Projets",
+    "SubtitleProjects": "Fragments du passé",
+    "titleAbout": "À propos",
+    "subtitleAbout": "Aboutabout",
+    "MenuTagClose": "fermer",
+    "MenuTag": "Menu",
+    "cat1": "Display",
+    "cat2": "Webdesign",
+    "backBtn": "Back"
+  },
+  "HelperPanel": {
+    "closeBTN": "fermer",
+    "Panel1": {
+      "title": "Bienvenue",
+      "subtitle": "Choisis ta langue",
+      "choice1": "Français",
+      "choice2": "English"
+    },
+    "Panel2": {
+      "title": "Performances",
+      "subtitle": "Animations WebGL",
+      "desc": "Désactive les animations webGL pour de meilleures performances",
+      "choice1": "ON",
+      "choice2": "OFF"
+    },
+    "Panel3": {
+      "title": "All done !",
+      "subtitle": "Paramètres sauvegardés",
+      "desc": "Vous pouvez changer ces options dans le menu"
+    }
+  },
+  "MailerPanel": {
+    "title": "Envoyer un mail",
+    "subtitle": "Prenons contact",
+    "email": "Votre adresse email",
+    "subject": "Sujet",
+    "message": "Message",
+    "submit": "Envoyer",
+    "sending": "Envoi...",
+    "sendingsubtitle": "patienter",
+    "sent": "succès !",
+    "errorsent": "Erreur !",
+    "errorsentsubtitle": "désolé réessayer",
+    "sentsubtitle": "Mail envoyé"
+  },
+  "Home": {
+    "Tagline":"Webdesigner & developer",
+    "MenuContentHome":
+      [
+        "Références",
+        "Clients",
+        "React + Redux",
+        "WhatevarFR"
+      ]
+    ,
+    "SectionGenesis": {
+      "TitleGenesis": "Genesis",
+      "BtnDownload": "Envie d'une collaboration ?",
+      "BtnMore": "more about me",
+      "ParaphGenesis": [
+        {
+          "txt":
+            "Hi, i’m Jérémy. A 27 years old French webdesigner & developer."
+        },
+        {
+          "txt":
+            "I’m actually focusing on learning webApps development and combine it with my experience <br /> in design and animation to build high interactive interfaces."
+        },
+        {
+          "txt":
+            "This website is developped with <a href='https://reactjs.org/' tabindex='-1' target='_blank'>React</a> and <a href='https://redux.js.org/' tabindex='-1' target='_blank'>Redux</a>"
+        },
+        {
+          "txt":
+            "Animations are powered by <a href='https://greensock.com/gsap' tabindex='-1' target='_blank'>GSAP</a> & Webgl by <a href='http://www.pixijs.com/' tabindex='-1' target='_blank'>PixiJS</a>"
+        }
+      ]
+    },
+    "SectionProject": {
+      "Title": "Past work",
+      "Paraph": [
+        {
+          "txt": "I've work several years for video game and movie licenses"
+        }
+      ]
+    }
+  }
+}

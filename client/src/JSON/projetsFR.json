@@ -1,0 +1,186 @@
+{
+  "projets": [
+    {
+      "id": "middle_earth",
+      "name": "Middle Earth",
+      "desc": "lolololol",
+      "role": "Conception, Art direction, Motion design, Development",
+      "previewIMG": "/img/project/middle-earth/preview.png",
+      "category": "game",
+      "key1": "campain",
+      "client": "Warner",
+      "index": "/img/project/middle-earth/html/index.html",
+      "logoBG": "/img/project/middle-earth/logo.png",
+      "thumbSliderHome": "/img/project/middle-earth/thumbnail/slider_home_bg.jpg",
+      "galleryBGViewer": "/img/project/middle-earth/parallax/bg_preview.jpg",
+      "galleryLayer2": "/img/project/middle-earth/parallax/front.png",
+      "galleryLayer": "/img/project/middle-earth/parallax/middle.png",
+      "thumbBG": "/img/project/middle-earth/thumbnail/thumbBG.jpg",
+      "thumbFront": "/img/project/middle-earth/thumbnail/thumbFront.png",
+      "chapter": [
+        {
+          "ID": "Intro",
+          "name": "Intro"
+        }
+      ],
+      "categories": ["display"]
+    },
+    {
+      "id": "animaux_fantastiques",
+      "name": "Fantastic Beasts",
+      "desc":
+        "Praesent gravida sapien in sapien tempor congue. Proin scelerisque turpis at est iaculis, eu facilisis tortor porta. Etiam mi nunc, varius eu placerat varius, aliquet imperdiet urna. Ut imperdiet purus eget luctus ornare. Nunc luctus dui id faucibus egestas.",
+      "category": "film",
+      "key1": "campain",
+      "role": "Conception, Art direction, Motion design, Development",
+      "client": "Warner",
+      "logoBG": "/img/project/FB/logo.png",
+      "thumbSliderHome": "/img/project/FB/thumbnail/slider_home_bg.jpg",
+      "index": "/img/project/middle-earth/html/index.html",
+      "galleryBGViewer": "/img/project/FB/parallax/bg_preview.jpg",
+      "galleryLayer": "/img/project/FB/parallax/middle.png",
+      "galleryLayer2": "/img/project/FB/parallax/front.png",
+      "thumbBG": "/img/project/FB/thumbnail/thumbBG.jpg",
+      "thumbFront": "/img/project/FB/thumbnail/thumbFront.png",
+      "chapter": [
+        {
+          "ID": "Intro",
+          "name": "Intro"
+        }
+      ],
+      "categories": ["display"]
+    },
+    {
+      "id": "psleague",
+      "name": "Playstation League",
+      "desc": "Plateforme eSport Sony",
+      "role": "Art direction, webdesign, digital display",
+      "category": "game",
+      "key1": "Design",
+      "client": "Sony",
+      "index": "/img/project/middle-earth/html/index.html",
+      "logoBG": "/img/project/PS/logo.png",
+      "thumbSliderHome": "/img/project/PS/thumbnail/slider_home_bg.jpg",
+      "galleryBGViewer": "/img/project/PS/parallax/bg.jpg",
+      "galleryLayer": "",
+      "galleryLayer2": "/img/project/PS/parallax/front.png",
+      "thumbBG": "/img/project/PS/thumbnail/thumbBG.jpg",
+      "thumbFront": "/img/project/PS/thumbnail/thumbFront.png",
+      "chapter": [
+        {
+          "ID": "Intro",
+          "name": "Intro"
+        }
+      ],
+      "categories": ["webdesign", "display"]
+    },
+    {
+      "id": "dunkerque",
+      "name": "Dunkerque",
+      "desc": "",
+      "role": "Conception, Art direction, Motion design, Development",
+      "thumb": "/img/project/dunkerque/slot.jpg",
+      "previewIMG": "/img/project/nino/preview.png",
+      "key1": "campain",
+      "index": "/img/project/middle-earth/html/index.html",
+      "key3": " Réseaux sociaux",
+      "category": "film",
+      "client": "Warner",
+      "logoBG": "/img/project/dunkerque/logo.png",
+      "thumbSliderHome": "/img/project/dunkerque/thumbnail/slider_home_bg.jpg",
+      "galleryBGViewer": "/img/project/dunkerque/parallax/bg.jpg",
+      "galleryLayer": "",
+      "galleryLayer2": "/img/project/dunkerque/parallax/front.png",
+      "thumbBG": "/img/project/dunkerque/thumbnail/thumbBG.jpg",
+      "thumbFront": "/img/project/dunkerque/thumbnail/thumbFront.png",
+      "chapter": [
+        {
+          "ID": "Intro",
+          "name": "Intro"
+        }
+      ],
+      "categories": ["display"]
+    },
+    {
+      "id": "wonder_woman",
+      "name": "Wonder Woman",
+      "role": "Conception, Art direction, Motion design, Development",
+      "desc": "Plateforme eSport Sony",
+      "thumb": "/img/project/ww/slot.jpg",
+      "key1": "campain",
+      "category": "film",
+      "index": "/img/project/middle-earth/html/index.html",
+      "galleryBG": "/img/project/ww/bg.jpg",
+      "galleryLayer2": "/img/project/ww/Layer1.png",
+      "logoBG": "/img/project/ww/logo.png",
+      "thumbSliderHome": "/img/project/ww/thumbnail/slider_home_bg.jpg",
+      "client": "20th Century",
+      "thumbBG": "/img/project/ww/thumbnail/thumbBG.jpg",
+      "thumbFront": "/img/project/ww/thumbnail/thumbFront.png",
+      "chapter": [
+        {
+          "ID": "Intro",
+          "name": "Intro"
+        }
+      ],
+      "categories": ["display"]
+    },
+    {
+      "id": "universal",
+      "name": "Univers Blu-ray",
+      "role": "Conception, Art direction, Motion design, Development",
+      "desc": "Plateforme eSport Sony",
+      "thumb": "/img/project/ubr/slot.jpg",
+      "galleryBG": "/img/project/ubr/bg.jpg",
+      "thumbSliderHome": "/img/project/ubr/thumbnail/slider_home_bg.jpg",
+      "index": "/img/project/middle-earth/html/index.html",
+      "logoBG": "/img/project/ubr/logo.png",
+      "galleryLayer2": "/img/project/ubr/Layer1.png",
+      "category": "film",
+      "client": "Universal",
+      "key1": "Design",
+      "chapter": [
+        {
+          "ID": "Intro",
+          "name": "Intro"
+        }
+      ],
+      "categories": ["webdesign"]
+    },
+    {
+      "id": "ninokuni",
+      "name": "Ni no Kuni 2",
+      "desc":
+        "Re-enter the animated world of Ni no Kuni in the sequel to the role-playing game developed by LEVEL-5 renoun for it's art style inspired by studio Ghibli.",
+      "role": "Adaptation, Motion design, Translation",
+      "thumb": "/img/project/nino/slot.jpg",
+      "key1": " campain",
+      "category": "game",
+      "client": "Namco Bandai",
+      "index": "/img/project/nino/html/index.html",
+      "galleryBGViewer": "/img/project/nino/parallax/bg.jpg",
+      "galleryBG": "/img/project/nino/bg.jpg",
+      "logoBG": "/img/project/nino/logo.png",
+      "galleryLayer2": "/img/project/nino/parallax/front.png",
+      "galleryLayer": "/img/project/nino/parallax/middle.png",
+      "thumbSliderHome": "/img/project/nino/thumbnail/slider_home_bg.jpg",
+      "thumbBG": "/img/project/nino/thumbnail/thumbBG.jpg",
+      "thumbFront": "/img/project/nino/thumbnail/thumbFront.png",
+      "chapter": [
+        {
+          "ID": "Intro",
+          "name": "Introduction"
+        },
+        {
+          "ID": "Chapter1",
+          "name": "Adaptation"
+        },
+        {
+          "ID": "Chapter2",
+          "name": "Formats"
+        }
+      ],
+      "categories": ["display"]
+    }
+  ]
+}

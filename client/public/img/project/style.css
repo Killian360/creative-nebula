@@ -1,0 +1,71 @@
+@font-face {
+    font-family: Radiance;
+    src: url(/font/radiance.woff);
+}
+
+@font-face {
+    font-family: Radiance-semi;
+    src: url(/font/radiance-semibold.ttf);
+}
+
+body
+{
+font-family: 'Roboto', sans-serif;
+font-size:10px;
+color:#000;
+margin:0;
+padding:0;
+background: transparent;
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+overflow: hidden;
+
+}
+
+
+#ProjectContent
+{
+	width:85%;
+	left:0;
+	right:0;
+	margin:auto;
+	max-width:1200px;
+}
+
+.text
+ {
+max-width:1350px;
+  color:#06197b;
+  position:relative;
+  font-size: 2.2em;
+  font-family: 'Radiance', sans-serif;
+  word-spacing: 0.1em;
+  font-weight: 300;
+  line-height:2em;
+  margin:auto;
+  padding-top:25px;
+  padding-bottom:25px;
+  opacity:0;
+  transform: scale(0.9);
+  letter-spacing: .05em;
+
+}
+
+.semibold
+{
+	  font-family: 'Radiance-semi', sans-serif;
+}
+
+.Headertext
+{
+  font-size: 8.5em;
+  font-weight: 700;
+  padding-bottom:2.5vh;
+  line-height:normal;
+padding-top:2.5vh;
+color:#06197b;
+   font-family: 'Radiance', serif;
+   text-transform:uppercase;
+  text-align:center;
+}

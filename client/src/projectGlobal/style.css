@@ -1,0 +1,646 @@
+@font-face {
+    font-family: Radiance-semi;
+    src: url(/font/radiance-semibold.ttf);
+}
+
+#globalGradient
+{
+  top:0;
+  background: rgb(0, 9, 29);
+  background-image: linear-gradient(45deg, rgba(50, 3, 103, 0.8), rgb(14, 0, 130));
+  background-size: 100% 100%;
+  /* animation:    radiant-highlight-bg-project 4.5s infinite; */
+  width:100%;
+  height:100%;
+  position:fixed;
+  z-index:-1;
+}
+
+
+
+@keyframes radiant-highlight-bg-project-blue {
+  0%   {   background-position:300% 100%; filter: brightness(100%)  hue-rotate(0deg);}
+  50% {    background-position:150% 100%;  filter: brightness(140%) hue-rotate(-40deg)}
+  100%   { background-position:0% 100%; filter: brightness(100%)  hue-rotate(0deg); }
+}
+
+#TransitionWrapper
+{
+  position:absolute;
+  width:100%;
+  height:100%;
+background-color: #17056f;
+z-index:5005;
+left:0;
+top:0;
+border-radius:100%;
+}
+
+.InfoClient
+{
+  font-family: 'Radiance',serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  float:left;
+  color:#8c8cd7;
+  position:absolute;
+  right:0;
+  top:50%;
+  padding-bottom:20px;
+  text-align: center;
+  transform: translateY(-50%);
+  padding-right:35px;
+}
+
+.InfoContent
+{
+  font-family: 'Radiance',serif;
+  font-size: 2.1em;
+  font-weight: 300;
+  color:#FFF;
+  position:absolute;
+  left:0;
+  right:0;
+  top:50%;
+  z-index:10;
+  padding-bottom:20px;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.infogame
+{
+position:absolute;
+top:-12px;
+left:20px;
+margin:auto;
+width:12%;
+height:auto;
+background-image: url(/img/project/icon/game_icon.svg);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+min-width:40px;
+z-index:5;
+}
+
+.infofilm
+{
+position:absolute;
+top:-12px;
+left:20px;
+margin:auto;
+width:12%;
+height:auto;
+background-image: url(/img/project/icon/film_icon.svg);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+min-width:40px;
+z-index:5;
+}
+
+.infoBoxLosange
+{
+  position: relative;
+  left: 20px;
+  height:auto;
+  width:12%;
+  top:-5px;
+  min-width:40px;
+  background-color: #1a239a;
+  z-index:4;
+  transform:rotate(45deg) scale(0);
+}
+
+.InfoBox
+{
+  position:absolute;
+  height:14%;
+  width:100%;
+  padding-bottom:20px;
+  top:114%;
+  background-color: #1a239a;
+  z-index:4;
+  min-height:43px;
+  z-index:15000;
+}
+
+.InfoBox-gradient
+{
+  height:100%;
+  width:100%;
+  position:absolute;
+}
+
+#projectFrame
+{
+  width:73%;
+position:absolute;
+height:63%;
+top:30vh;
+right:5vw;
+}
+
+.Tilt:hover
+{
+  z-index:10000;
+}
+
+.TiltFront
+{
+  z-index:15000;
+  z-index: 15000;
+  height: 100%;
+  position: absolute;
+  left:0;
+  right:0;
+  margin:auto;
+}
+
+
+#projectsContainer .Tilt
+{
+  width: 60%;
+  margin-left:2.5vw;
+  float:left;
+  box-shadow: 0px 0px 20px 7px #0e034e;
+}    
+
+
+#fakezone
+{
+  position:absolute;
+  top:37%;
+  width:100%;
+}
+
+#projectsContainer
+{
+  width:100%;
+  z-index:2;
+  right:0;
+  align-items: center;
+  min-height: 0;
+min-width: 0;
+flex-basis: content;
+position: relative;
+  max-width:1500px;
+  display:flex;
+  flex-flow: row wrap;
+
+}
+
+#projectsContainer::after
+{
+  content: "";
+  clear: both;
+  display: table
+  }
+
+#ProjectInner
+{
+  width:100%;
+  position:absolute;
+  top:0;
+  height:100%
+}
+
+#Ico_project
+{
+  height: 70%;
+  width: 12%;
+  float: left;
+  position: relative;
+  min-width: 60px;
+  max-width: 175px;
+      top: 50%;
+      transform: translateY(-45%);
+}
+
+.projectTitle span
+{
+  display:block;
+}
+
+.projectTitle
+{
+  color:#FFF;
+  font-family: 'Radiance';
+  font-weight: 300;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  position:relative;
+  z-index:10;
+  
+
+}
+
+.subTitle
+{
+  margin-top:5px;
+  font-weight:400;
+  font-size: 2.3em;
+  padding:0 0px;
+  color:#4e5aff;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity:1;
+}
+
+.TitleGradient
+{
+  /* background: -webkit-linear-gradient( #ffffff 40% , rgba(247,250,250,0.5) 100% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  font-size: 4.7em;
+}
+
+.BGImg
+{
+  height:100%;
+  width:100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow:hidden;
+  position:absolute;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+.viewProject
+{
+  overflow:hidden;
+  z-index:4000;
+  overflow-x: hidden !important;
+  margin-bottom:-20px !important;
+}
+
+.blankSpace
+{
+  width:100%;
+  height:10%;
+  position:relative;
+}
+
+.track-vertical-white
+{
+  background-color: rgba(2,120,150,0.3);
+  position: fixed!important;
+    width: 4px !important;
+    right: 0;
+    bottom: 0px;
+    top: 0;
+    z-index:55000;
+}
+
+.track-vertical-transparent
+{
+  background-color: rgba(2,120,150,0.3);
+  position: fixed!important;
+  display:none!important;
+    width: 4px !important;
+    right: 1.5%;
+    bottom: 40px;
+    top: calc(11% + 40px);
+    z-index:55000;
+}
+
+@media (max-width: 1000px) {
+  .track-vertical-white
+  {
+    background-color: rgba(2,120,150,0.3);
+    position: fixed!important;
+      width: 4px !important;
+      right: 8px;
+      bottom: 15px;
+      top: calc(10% + 15px);
+      z-index:55000;
+  }
+}
+
+.thumb-highlight
+{
+  height:150%;
+  width:150%;
+  opacity:0;
+  position:relative;
+  z-index:1;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#999999+0,ffffff+50,e5e5e5+100&0+0,1+51,0+100 */
+background: -moz-linear-gradient(-45deg, rgba(153,153,153,0) 0%, rgba(255,255,255,0.98) 50%, rgba(254,254,254,1) 51%, rgba(229,229,229,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(153,153,153,0) 0%,rgba(255,255,255,0.98) 50%,rgba(254,254,254,1) 51%,rgba(229,229,229,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(153,153,153,0) 0%,rgba(255,255,255,0.98) 50%,rgba(254,254,254,1) 51%,rgba(229,229,229,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', endColorstr='#00e5e5e5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.ThumbLOGO
+{
+  position:absolute;
+  bottom:5%;
+  width:100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height:25%;
+  z-index:4;
+}
+
+.FrontImg
+{
+  width:100%;
+  z-index:3;
+  top:-20%;
+  height:120%;
+  position:absolute;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-origin: bottom center;
+  pointer-events: none;
+}
+
+.ProjectWrapperInfo
+{
+  position:absolute;
+  left:70%;
+  top:50%;
+  transform:translateY(-50%);
+  float:left;
+}
+
+.TitleProjectWrapper
+{
+  color:#FFF;
+  font-family: "Radiance";
+  text-transform: uppercase;
+  font-size: 3em;
+  width:100%;
+  letter-spacing: 0.05em;
+}
+
+.ClientProjectWrapper
+{
+  color:#725bf7;
+  font-family: "Radiance";
+  font-size: 2.2em;
+  width:100%;
+}
+
+.FrontImg img
+{
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  height:100%;
+  transform-origin: center bottom;
+  pointer-events: none;
+
+}
+
+.thumb-vertical-white
+{
+  position:absolute;
+  background-color: #FFF;
+  opacity:0.8;
+  width:4px !important;
+  cursor:pointer;
+  transition: all 0.05s;
+}
+
+.thumb-vertical-transparent
+{
+  position:absolute;
+  background-color: #FFF;
+  opacity:0.8;
+  width:6px !important;
+  display:none;
+  cursor:pointer;
+  right: 1px;
+  transition: all 0.05s;
+}
+
+#ProjectOptions
+{
+  position:absolute;
+  width:15%;
+  height:25%;
+  top:20%;
+  left:5%;
+  z-index:5000;
+  pointer-events: none;
+}
+
+
+
+#gradientOver
+{
+  width:100%;
+  height:10%;
+  background-image: linear-gradient(to right, #161e83  1%,rgba(44,17,129,1) 100%);
+opacity:0.9;
+  background-size: 100% 100%;
+  z-index: 5008;
+    position: fixed;
+}
+
+#projectBody
+{
+  top:0;
+  position:absolute;
+  width:100%;
+  height:100%;
+}
+
+.gradientSeparator
+{
+  position:absolute;
+  bottom:0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+48,ffffff+100&0+0,0.57+47,0+100 */
+background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.57) 47%, rgba(255,255,255,0.56) 48%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,0.57) 47%,rgba(255,255,255,0.56) 48%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.57) 47%,rgba(255,255,255,0.56) 48%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+height:1px;
+width:100%;
+opacity:0;
+
+}
+
+.projectBox:hover:before
+{
+  content: "";
+width:100%;
+height:100%;
+padding:1px;
+padding-bottom:2px;
+position: absolute;
+top:-1px;
+left:-1px;
+background-size: 300% 100%;
+background-image: linear-gradient(to right, rgba(34,34,134,1) 0%,rgba(49,87,191,1) 18%,rgba(255,255,255,1) 50%,rgba(49,87,191,1) 80%,rgba(34,34,134,1) 100%);
+animation:    radiant-highlight-bg-project-top 3.5s infinite linear;
+}
+
+
+@keyframes radiant-highlight-bg-project-top {
+  0%   {   background-position:300% 100%}
+  50% {    background-position:150% 100%}
+  100%   { background-position:0% 100%}
+}
+
+@keyframes radiant-highlight-bg-project-bottom {
+  0%   {   background-position:300% 100%; filter: brightness(100%);}
+  50% {    background-position:150% 100%;  filter: brightness(140%)}
+  100%   { background-position:0% 100%; filter: brightness(100%)}
+}
+
+@keyframes radiant-highlight-bg-project-left {
+  0%   {   background-position:100% 300%; filter: brightness(100%)}
+  50% {    background-position:100% 150%;  filter: brightness(140%)}
+  100%   { background-position:100% 0%; filter: brightness(100%)}
+}
+
+@keyframes radiant-highlight-bg-project-right {
+  0%   {   background-position:100% 0%; filter: brightness(100%)}
+  50% {    background-position:100% 150%;  filter: brightness(140%)}
+  100%   { background-position:100% 300%; filter: brightness(100%)}
+}
+
+.OverflowMask
+{
+  overflow:hidden;
+  height:calc(100% + 1px);
+  width:100%;
+  position:absolute;
+  background-color: #0a0d5a;
+  /* background-color: #222286; */
+}
+
+.projectBox-highlight
+{
+  background: linear-gradient(322deg, #36ccf2, #2272a4, #00baff);
+  background-size: 300% 100%;
+  width:90%;
+  left:0;
+  right:0;
+  margin: auto;
+  top:20px;
+  opacity:1;
+  position:absolute;
+  z-index:0;
+  height:20px;
+  animation:    radiant-highlight-bottom-blur 4.5s infinite;
+}
+
+#SVG_ico_project
+{
+  width: 100%;
+  position: absolute;
+  height:100%;
+}
+
+.iconRectProject
+{
+  fill:none;
+  stroke-Width:8px;
+  stroke: #FFFF;
+  stroke-opacity:0.8;
+}
+
+.iconRectProject2
+{
+  fill:none;
+  stroke-Width:4px;
+  stroke: #FFF;
+  stroke-opacity:0.2;
+  /* stroke-dasharray: 333.8;
+animation: dash 5s linear infinite; */
+}
+#iconBrushProject
+{
+  perspective: 20px;
+
+}
+
+/* .inactive
+{
+  transform: scale(0) !important;
+  opacity:0 !important;
+  animation: all 0.2s;
+  display:none;
+}
+
+.active
+{
+  transform: scale(1) !important;
+  opacity:1 !important;
+  animation: all 0.2s;
+} */
+
+.justifyleft{
+  justify-content: flex-start;
+  display: flex;
+  width:100%;
+  flex-flow: row wrap;
+
+}
+
+.pattern
+{
+  position:absolute;
+  left:0;
+  top:0;
+  width:30%;
+  height:70%;
+  background-image: url(/img/UI/pattern.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  pointer-events: none;
+}
+
+.shrink
+{
+  position:fixed;
+  height:10%;
+  z-index:5100;
+}
+
+.ProjectWrapperMain
+{
+  width:100%;
+  margin-bottom:20vh;
+  position:relative;
+  left:0;
+  right:0;
+}
+
+.projectBox
+{
+  position:relative;
+  width:100%;
+  height:60%;
+  left:0;
+  right:0;
+  background-color: #222286;
+  transform: scale(0.8);
+  overflow:visible;
+cursor:pointer;
+animation: all 0.2s;
+min-height: 0;
+min-width: 320px;
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+ -khtml-user-select: none;
+   -moz-user-select: none;
+    -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-tap-highlight-color: transparent; /* For some Androids */
+}
+/*
+#projectsContainer div:last-child {
+  margin-right: auto;
+} */

@@ -1,0 +1,381 @@
+@font-face {
+  font-family: Book Antiqua;
+  src: url(/font/book-antiqua.ttf);
+}
+
+html {
+  overflow: auto;
+}
+
+#turnDevice {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: "Book Antiqua", arial;
+  font-size: 4em;
+  display: none;
+}
+
+#centerturn {
+  margin: auto;
+  text-align: center;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+  background: #040922;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+@media (max-width: 3440px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1920px) {
+  body {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1800px) {
+  body {
+    font-size: 8.5px;
+  }
+  .ariane--title {
+    font-size: 6.5em !important;
+  }
+}
+
+@media (max-width: 1500px) {
+  .ariane--title {
+    font-size: 6.5em !important;
+  }
+}
+
+@media (max-width: 1279px) {
+  body {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 5px;
+  }
+}
+
+@media (max-width: 350px) {
+  body {
+    font-size: 4.2px;
+  }
+}
+
+.backgroundRound {
+  background-color: #2a2c30;
+  border-radius: 50%;
+  width: 4000px;
+  height: 4000px;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  transform-origin: center;
+  position: absolute;
+  z-index: -1;
+  top: -1950;
+  right: -1750;
+}
+
+.logo {
+  position: relative;
+  top: 50%;
+  -webkit-transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+  fill: #fff;
+  background-repeat: no-repeat;
+}
+
+/* Project Transition */
+
+.projectContentTransition {
+  transform: scale(1);
+}
+
+.contentHomeView.example-enter {
+  opacity: 0.9 !important;
+  transform: translateX(-100%) scale(0.8) !important;
+}
+
+.contentHomeView.example-enter.example-enter-active {
+  opacity: 0.9 !important;
+  transform: translateX(0%) scale(0.8) !important;
+  transition: all 0.3s ease-in !important;
+  transition-delay: 0.5s;
+}
+
+.contentHomeView.example-leave {
+  opacity: 1;
+}
+
+.contentHomeView.example-leave.example-leave-active {
+  opacity: 0;
+  transition-delay: 0.08s !important;
+}
+
+.contentHomeView.example-appear {
+  opacity: 0.01 !important;
+}
+
+.contentHomeView.example-appear.example-appear-active {
+  opacity: 1 !important;
+  transform: translateX(0%) scale(1);
+  transition: all 0.5s ease-in !important;
+  overflow: hidden !important;
+}
+
+.transition-item {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.presentation2 {
+  position: relative;
+  left: 0;
+  overflow: auto;
+  right: 0;
+  width: 95vw;
+  margin: auto;
+  text-align: center;
+  z-index: 50;
+  top: 20vh;
+}
+
+.inner {
+  top: 40px;
+  padding: 0 v20px;
+}
+
+#Stuff {
+  position: absolute;
+}
+
+.margin {
+  width: 95vw;
+  position: relative;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+.home {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.project {
+  position: absolute;
+  height: 85%;
+  width: 100%;
+  top: 10%;
+  left: 0;
+}
+.project_container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 100vh;
+  left: 0;
+  background-color: #041726;
+  background-image: url(/img/UI/bg_projects.jpg);
+  background-size: cover;
+}
+
+.content {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  padding: 40px 60px 80px;
+}
+
+.content p {
+  font-weight: 400;
+  font-size: 1.6em;
+}
+.projets {
+  height: auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+}
+
+.stuff {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s; /* Safari */
+  transition: all 0.3s;
+}
+
+.home.transition-appear {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.home.transition-appear.transition-appear-active {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.home.transition-leave {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: opacity 0.2s;
+}
+
+.home.transition-leave.transition-leave-active {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.project.transition-appear {
+  transition: opacity 0.2s;
+  opacity: 0;
+}
+
+.project.transition-appear.transition-appear-active {
+  transition: opacity 0.2s;
+}
+
+.project.transition-leave {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.project.transition-leave.transition-leave-active {
+  opacity: 0;
+}
+
+.duration {
+  transition: opacity 0.2s;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.5s;
+  -webkit-transition: all 0.4s;
+  cursor: pointer;
+}
+
+.transitionUpDown-enter {
+  opacity: 1;
+  z-index: 50;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.transitionUpDown-appear {
+  opacity: 1;
+  top: -30vh;
+  z-index: 50;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.transitionUpDown-appear.transitionUpDown-appear-active {
+  opacity: 1;
+  top: 20vh;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.5s;
+}
+
+.transitionUpDown-enter.transitionUpDown-enter-active {
+  opacity: 1;
+  top: 30vh;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -webkit-transition-delay: 0.5s; /* Safari */
+  transition-delay: 0.5s;
+}
+
+.transitionUpDown-leave {
+  opacity: 1;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.transitionUpDown-leave.transitionUpDown-leave-active {
+  opacity: 1;
+  top: -20vh;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+}
+
+.app {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.detail-page {
+  overflow: auto;
+  box-sizing: border-box;
+  padding: 20px;
+  height: 100vh;
+  background-color: #03a9f4;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.disabled-link {
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.enabled-link {
+  pointer-events: auto;
+}

@@ -1,0 +1,233 @@
+#formMailWrapper
+{
+  position:relative;
+  height:55%;
+  width:90%;
+  padding-top:15px;
+  left:0;
+  right:0;
+  margin:auto;
+}
+
+.input--mailer
+{
+  background-color:rgba(35,21,109,0);
+  border:none;
+  color:#889ed8;
+  font-size: 2.5em;
+  font-family: "Radiance";
+  padding-top:2vh;
+  margin-top:10px;
+  padding-bottom:2vh;
+  letter-spacing: 0.05em;
+  width:100%;
+  padding-left:20px;
+}
+
+.LoaderMail{
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: none;
+  top: 0;
+  position: absolute;
+}
+
+.input--email--mailer
+{
+  background-color:rgba(35,21,109,0);
+  border:none;
+  color:#889ed8;
+  font-size: 2.5em;
+  font-family: "Radiance";
+  padding-top:2vh;
+  margin-top:10px;
+  padding-bottom:2vh;
+  letter-spacing: 0.05em;
+  width:100%;
+  padding-left:20px;
+}
+
+.input--email--mailer::placeholder
+{
+  color:inherit;
+}
+.input--email--mailer:focus::placeholder
+{
+  color:#FFF;
+}
+
+
+.input--mailer::placeholder
+{
+  color:inherit;
+}
+.input--mailer:focus::placeholder
+{
+  color:#FFF;
+}
+
+.input--field--mailer::placeholder
+{
+  color:inherit;
+}
+
+.input--field--mailer:focus::placeholder
+{
+  color:#FFF;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0;
+  -webkit-text-fill-color: #FFF;
+  -webkit-box-shadow: 0;
+  box-shadow:0;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.highlightName
+{
+  background-color: rgba(35,21,109,0);
+  border: none;
+  color: #FFF;
+  font-size: 2.5em;
+  font-family: "Radiance";
+  padding-top: 20px;
+  margin-top: 10px;
+  padding-bottom: 20px;
+  letter-spacing: 0.05em;
+  width: 100%;
+  padding-left: 20px;
+  position:absolute;
+  overflow:hidden;
+}
+
+.input--field--mailer
+{
+background-color: rgba(255,255,255,0);
+border: 0;
+font-size: 2.5em;
+color: #889ed8;
+font-family: 'Radiance', sans-serif;
+letter-spacing: 0.05em;
+margin-top: 2.5vh;
+margin-bottom: 2.5vh;
+outline: none !important;
+transition: all 0.2s;
+z-index: 4;
+resize: none;
+height:15vh;
+width:100%;
+padding-left:20px;
+padding-right:20px;
+}
+
+.btnMailerWrapper
+{
+  width:80%;
+  height:90px;
+  position:relative;
+  left:0;
+  right:0;
+  bottom:0;
+  padding-top:3.5vh;
+  padding-bottom:3.5vh;
+  margin:auto;
+}
+
+.input--mailer option {
+  position: absolute;
+  background-color: #FFF;
+  color:#2d509b;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.btnMailerWrapper .BtnContainer
+{
+  min-width:0px !important;
+  max-width:500px !important;
+}
+
+.underbar_name
+{
+width: 100%;
+height: 2px;
+transform-origin: center;
+top: -2px;
+background-size:300% 100%;
+z-index:2;
+animation : radiant-highlight-bg-Main 4.5s infinite linear;
+background-image: linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(25,109,181,1) 50%,rgba(255,255,255,1) 100%);
+position:relative;
+transform: scaleX(0);
+}
+
+.underbar_name_before
+{
+width: 100%;
+height: 2px;
+transform-origin: center;
+z-index:0;
+position:relative;
+background-color: #2d509b;
+}
+
+.underbar_email
+{
+width: 100%;
+height: 2px;
+transform-origin: center;
+top: -2px;
+background-size:300% 100%;
+z-index:2;
+animation : radiant-highlight-bg-Main 4.5s infinite linear;
+background-image: linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(25,109,181,1) 50%,rgba(255,255,255,1) 100%);
+position:relative;
+transform: scaleX(0);
+}
+
+.underbar_email_before
+{
+width: 100%;
+height: 2px;
+transform-origin: center;
+z-index:0;
+position:relative;
+background-color: #2d509b;
+}
+
+.underbar_message
+{
+width: 100%;
+height: 2px;
+transform-origin: center;
+top: -2px;
+background-size:300% 100%;
+z-index:2;
+animation : radiant-highlight-bg-Main 4.5s infinite linear;
+background-image: linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(25,109,181,1) 50%,rgba(255,255,255,1) 100%);
+position:relative;
+transform: scaleX(0);
+}
+
+.underbar_message_before
+{
+width: 100%;
+height: 2px;
+transform-origin: center;
+z-index:0;
+position:relative;
+background-color: #2d509b;
+}

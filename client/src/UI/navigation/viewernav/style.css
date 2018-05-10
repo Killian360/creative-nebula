@@ -1,0 +1,142 @@
+#ViewerNav
+{
+  width:100%;
+  z-index:5;
+  position:fixed;
+  margin:auto;
+  height:40%;
+  z-index:20;
+  left:0;
+  right:0;
+  bottom:0;
+  pointer-events:none;
+}
+
+
+#navigationViewer
+{
+  position:fixed;
+  height:40%;
+  width:100%;
+  z-index:5011;
+  margin:auto;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:10;
+}
+
+
+#Nav-left
+{
+height:100%;
+width:50%;
+background-image:  linear-gradient(20deg, rgba(32,3,101,0.5) 0%,rgba(125,185,232,0) 50%);
+float:left;
+}
+
+#Nav-right
+{
+height:100%;
+width:50%;
+background-image:  linear-gradient(-20deg, rgba(32,3,101,0.5) 0%,rgba(125,185,232,0) 50%);
+float:left;
+    bottom: 0;
+    right: 0;
+}
+
+.nav--Next--project
+{
+    position:absolute;
+    right:0;
+    height:10vh;
+    bottom:0;
+    min-height:100px;
+    width:20%;
+    font-family: "Radiance";
+    text-transform: uppercase;
+    font-size: 2.5em;
+    color:#FFF;
+    padding:15px;
+    padding-right:4vw;
+    cursor:pointer;
+    opacity:0.7;
+    pointer-events: auto;
+}
+
+.nav--Previous--project
+{
+    position:absolute;
+    left:0;
+    height:10vh;
+    bottom:0;
+    min-height:100px;
+    width:20%;
+    font-family: "Radiance";
+    text-transform: uppercase;
+    font-size: 2.5em;
+    color:#FFF;
+    padding:15px;
+    padding-left:4vw;
+    cursor:pointer;
+    pointer-events: auto;
+    opacity:0.7;
+}
+
+.nav--btnTxt
+{
+    top:50%;
+    transform:translateY(-50%);
+    position:relative;
+    float:left;
+    margin-left:2vw;
+    user-select: none;
+}
+
+.nav--btnTxt--right
+{
+    top:50%;
+    transform:translateY(-50%);
+    position:relative;
+    float:right;
+    margin-right:2vw;
+    user-select: none;
+}
+
+#nav--svg
+{
+    width: 50%;
+    fill: #FFF;
+    margin: auto;
+    stroke: none;
+    min-height: 30px;
+    min-width: 30px;
+    max-width: 45px;
+    padding-left: 15px;
+    position: relative;
+    top: 50%;
+    float:left;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 0;
+}
+
+#nav--svg--right
+{
+    width: 50%;
+    fill: #FFF;
+    margin: auto;
+    stroke: none;
+    min-height: 30px;
+    min-width: 30px;
+    max-width: 45px;
+    padding-right: 15px;
+    position: relative;
+    top: 50%;
+    float:right;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-left: 0;
+}

@@ -1,0 +1,51 @@
+#MailPanel
+{
+  position:absolute;
+  left:0;
+  right:0;
+  margin:auto;
+  top:52%;
+  max-width:850px;
+  width:40%;
+  z-index:1;
+  opacity:0;
+  min-width:300px;
+  max-height:90vh;
+  box-shadow: 0px 0px 355px 5px #6de7ff40;
+  background-image: linear-gradient(45deg, rgb(50, 3, 103), #0a3477);
+}
+
+@media (max-width: 1000px) {
+  #MailPanel
+  {
+    width:80%;
+  }
+}
+
+.Panel_border.MailPanel
+{
+  max-width:854px;
+  margin:auto;
+  left:-1px;
+  top:-1px;
+  width:calc(100% + 2px);
+  height:calc(100% + 2px);
+  background-color: #FFF;
+  position:absolute;
+  z-index:-1;
+  background: radial-gradient(to bottom, rgba(255,255,255,1) 0%,rgb(98, 166, 208) 45%, #614c87 70% , rgb(50, 3, 103) 100%);
+}
+
+.Panel_mail_loading
+{
+  width:100%;
+  height:10px;
+  background-size: 300% 100%;
+  background-image: linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(25,109,181,1) 50%,rgba(255,255,255,1) 100%);
+  animation: radiant-highlight-bg-Main 4.5s infinite linear ;
+  bottom:0;
+  z-index:0;
+  transform: scaleX(0);
+  transform-origin: center;
+position: absolute;
+}

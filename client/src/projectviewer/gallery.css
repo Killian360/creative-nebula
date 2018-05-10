@@ -1,0 +1,615 @@
+.gallery--bg--viewer
+{
+  position:absolute;
+  z-index:1;
+  width:110%;
+  /*max-height:750px;*/
+  bottom:0;
+  right:0;
+  opacity:1;
+  left:-5% !important;
+  margin:auto;
+  background-size: cover;
+  background-position:center;
+  height:120%;
+}
+
+.gallery-txt
+{
+  position:fixed;
+  z-index:60 !important;
+  top:0;
+  width:60%;
+  display:flex;
+}
+
+.icon-scroll,.icon-scroll:before
+{
+  position: absolute;
+  left: 50%;
+}
+
+.icon-scroll{
+  width: 35px;
+  height: 65px;
+  margin-left: -20px;
+  top: 87%;
+  margin-top: -35px;
+  box-shadow: inset 0 0 0 2px rgba(255,255,255,0.6);
+  border-radius: 25px;
+  z-index: 15;
+  opacity:0;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scrollMouse;
+  display:none;
+
+}
+.icon-scroll:before{
+  content: '';
+  width: 2px;
+  height: 8px;
+  background: #fff;
+  margin-left: -1px;
+  top: 15px;
+  border-radius: 4px;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-name: scroll;
+}
+@keyframes scroll{
+  0% {
+    opacity: 1;
+    }
+  100%{
+    opacity: 0;
+    transform: translateY(15px);
+    }
+}
+
+@keyframes scrollMouse{
+  0% {
+    }
+  90%{
+    transform: translateY(10px);
+    }
+    100%{
+      transform: translateY(0);
+      }
+}
+
+
+.gallery--Layer--bg
+{
+  z-index:2;
+  position: absolute!important;
+  height:100%;
+  top:0;
+  z-index:4;
+  margin-left:auto;
+  opacity:1;
+  width:110%;
+  right:0;
+  left:-5%;
+  margin:auto;
+  background-size: cover;
+  /* background-position:center calc(10vh + 30px); */
+  overflow: visible ;
+  background-repeat: no-repeat;
+  transition:transform 0.1s ease-out;
+}
+
+.gallery--Layer--viewer
+{
+  z-index:3;
+  position: absolute!important;
+  height:100%;
+  bottom:0;
+  z-index:6;
+  margin-left:auto;
+  opacity:1;
+  width:110%;
+  right:-5%;
+  overflow: visible;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition:transform 0.1s ease-out;
+}
+
+.gallery--front--viewer
+{
+  z-index:4;
+  position: absolute!important;
+  height:100%;
+  bottom:0;
+  z-index:7;
+  margin-left:auto;
+  opacity:1;
+  width:110%;
+  right:-5%;
+  top:10px;
+  overflow: visible;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition:transform 0.1s ease-out;
+}
+
+@media (max-width: 1000px) {
+
+  .gallery--front--viewer
+  {
+    background-position:-180;
+    height:calc(100% + 20px);
+    width:calc(100% + 20px);
+
+  }
+  .gallery--Layer--viewer
+  {
+    background-position:-180;
+    height:calc(100% + 20px);
+    width:calc(100% + 20px);
+  }
+
+}
+
+@media (max-width: 650px) {
+
+  .gallery--front--viewer
+  {
+    background-position:95%;
+    height:calc(100% + 20px);
+  }
+  .gallery--Layer--viewer
+  {
+    background-position:95%;
+    height:calc(100% + 20px);
+  }
+
+}
+
+
+
+.project-Title
+{
+  text-shadow: 0px 0px 0px #000;
+}
+
+.project-Client
+{
+      font-size: 0.5em;
+      letter-spacing: 0.15em;
+      color: #79c0d3;
+}
+
+#gallery-content
+{
+  position:absolute;
+  width:55%;
+  height:100%;
+  bottom:0;
+  margin:auto;
+  left:0;
+  transform-origin: 50% 50%;
+  z-index:6;
+  background-color: #FFF;
+background-size: cover;
+/*border-top-left-radius: 0px;
+border-top-right-radius: 50%;
+border-bottom-right-radius: 50%;
+border-bottom-left-radius: 50%;
+animation-name: uncover;
+animation-delay: 0.05s;
+animation-fill-mode: forwards;
+animation-duration: 0.2s;
+animation-iteration-count: 1;*/
+}
+
+.scene {
+  padding: 0;
+  margin: 0;
+  position:absolute !important;
+  top:0%;
+  right:0;
+  width:100%;
+  height:100%;
+  top:0;
+  list-style-type: none;
+  z-index:5;
+opacity:0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,080726+100&0+84,1+100 */
+  background: -moz-linear-gradient(top, rgba(125,185,232,0) 0%, rgba(27,35,69,0) 84%, rgba(8,7,38,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(125,185,232,0) 0%,rgba(27,35,69,0) 84%,rgba(8,7,38,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(125,185,232,0) 0%,rgba(27,35,69,0) 84%,rgba(8,7,38,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#080726',GradientType=0 ); /* IE6-9 */
+}
+
+#gallery-title
+{
+  position:absolute;
+  width:50%;
+  height:20%;
+  max-height:230px;
+  margin:auto;
+  left:5%;
+  top:15%;
+  transform-origin: 50% 50%;
+  z-index:6;
+  max-width:960px;
+  background-color: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#gallery-title-index
+{
+  position:absolute;
+  width:40%;
+  height:25%;
+  max-height:300px;
+  margin:auto;
+  right:2.5%;
+  bottom:10%;
+  transform-origin: 50% 50%;
+  z-index:60;
+  max-width:960px;
+  background-color: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+@keyframes uncover {
+    0%   {  width:0%;}
+    100% {width:55%; height:100%; border-radius: 0%;}
+}
+
+.content--gallery--viewer
+{
+  height:100%;
+  overflow:hidden;
+  width:100%;
+  opacity:1;
+  left:0;
+  top:0;
+  position: fixed;
+  transform-origin: center;
+}
+
+.content--gallery--viewer--home
+{
+  height:100%;
+  overflow:hidden;
+  width:100%;
+  opacity:1;
+  left:0;
+  top:0;
+  position: absolute;
+  transform-origin: center;
+}
+
+.galleryWrapper
+{
+  z-index:20;
+  position:absolute;
+  height:100vh;
+  width:100%;
+  top:0;
+  background-color: none;
+overflow:hidden;
+display: flex;
+}
+
+.galleryWrapperProject
+{
+  height:100%;
+  width:100%;
+  background-color: none;
+display: flex;
+opacity:1;
+cursor : grab;
+position:absolute;
+left:0;
+margin:auto;
+right:0;
+pointer-events: none;
+}
+
+/* .galleryWrapperProject::after
+{
+  height:calc(90vh - 95px);
+  width:100%;
+  background-color: #1a0967;;
+  content:'';
+  bottom:0;
+  position:absolute;
+} */
+
+.galleryWrapperProjectBackup
+{
+  height:100%;
+  width:130%;
+  top:0;
+  background-color: none;
+overflow:visible;
+display: flex;
+opacity:1;
+cursor : grab;
+position:absolute;
+left:-15%;
+pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+  .galleryWrapperProject
+  {
+    height:100%;
+    width:200%;
+    top:0;
+    background-color: none;
+  overflow:visible;
+  display: flex;
+  opacity:1;
+  left:-50%;
+  position:absolute;
+  }
+}
+
+.HomeWrapperParallax
+{
+height:100%;
+width:100%;
+top:0;
+background-color: none;
+overflow:visible;
+display: flex;
+opacity:1;
+position:absolute;
+left:0;
+z-index:1;
+}
+
+.parallaxStars
+{
+  position: absolute!important;
+    height: 100%;
+    bottom: 0;
+    z-index: 5;
+    margin-left: auto;
+    opacity: 1;
+    width: 100%;
+    overflow: visible;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+
+#canvas-container
+{
+  position:absolute;
+  top: 0;
+  left: 0;
+  z-index:4;
+  pointer-events: none;
+}
+
+.gallery-Title
+{
+  z-index:70;
+  position:absolute;
+  font-size:5.2em;
+  opacity:0;
+  width:100%;
+  text-transform: uppercase;
+  text-align: left;
+  bottom:27%;
+  color:#FFF;
+  font-family: 'Book Antiqua', arial;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9ae+1,275e6b+51,041726+100 */
+  letter-spacing: 0.25em;
+}
+
+.title_little
+{
+  font-size:3.2em;
+}
+
+@media (max-width: 1600px) {
+  .gallery-Title
+  {
+    font-size:4.5em;
+  }
+}
+
+
+
+@media (max-width: 1280px) {
+  .gallery-Title
+  {
+    font-size:3.8em;
+  }
+}
+
+/*.gallery-Title
+{
+  z-index:52;
+  position:relative;
+  height:0%;
+  width:85%;
+  font-size:5.2em;
+  top:10%;
+  font-weight: 600;
+  opacity:0;
+  text-transform: uppercase;
+  text-align: center;
+  color:#0c324a;
+  font-family: 'Book Antiqua', arial;
+background: rgb(125,185,174);
+background: -moz-linear-gradient(top, rgba(125,185,174,1) 1%, rgba(39,94,107,1) 51%, rgba(4,23,38,1) 100%);
+background: -webkit-linear-gradient(top, rgba(125,185,174,1) 1%,rgba(39,94,107,1) 51%,rgba(4,23,38,1) 100%);
+background: linear-gradient(to bottom, rgba(125,185,174,1) 1%,rgba(39,94,107,1) 51%,rgba(4,23,38,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9ae', endColorstr='#041726',GradientType=0 );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  letter-spacing: 0.25em;
+}*/
+
+.gallery--cancel
+{
+  position:fixed;
+  width:2vw;
+  min-width:60px;
+  top:40px;
+  right:3%;
+  z-index:112;
+  transition: all 0.2s;
+}
+.gallery--cancel:hover
+{
+transform: scale(1.1);
+}
+
+.gallery--cancel--outline
+{
+  Fill:none;
+  stroke:#81a9b8;
+  stroke-width:0.7px;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 400;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.key
+{
+  margin-left:0;
+  margin-right:5%;
+}
+
+.gallery-key
+{
+  z-index:52;
+  height:0%;
+  width:100%;
+  position:absolute;
+  font-size:0.4em;
+  opacity:0;
+  top:15%;
+  text-transform: uppercase;
+  text-align:left;
+  font-weight: 300;
+  color:#81b8b6;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.4em;
+}
+
+.gallery-container
+{
+  width:100%;
+height:100%;
+position:absolute;
+background-size: cover;
+background-position: center;
+  }
+
+.gallery_header_desc
+{
+  position:absolute;
+  font-size: 0.5em;
+  text-align: center;
+  font-weight: 300;
+  color: #FFF;
+  top:35%;
+  width:75%;
+  text-transform: none;
+  z-index: 7;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/*.gallery-key
+{
+  z-index:52;
+  position:relative;
+  height:0%;
+  width:100%;
+  font-size:2em;
+  transform: translateZ(0);
+  top:30px;
+  opacity:0;
+  text-transform: uppercase;
+  text-align:center;
+  font-weight: 300;
+  color:#0c324a;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.4em;
+}*/
+
+.gallery-desc
+{
+  top:70%;
+  position:absolute;
+  width:100%;
+  min-height:60%;
+  font-size:2.4em;
+  opacity:1;
+  background-image: url(/img/UI/bg_gallery.jpg);
+  background-size:cover;
+  text-align:center;
+  font-weight: 300;
+  color:#0c324a;
+  z-index:7;
+  padding-top:10vh;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+   background-blend-mode: screen;
+}
+
+.gallery-desc-overflow
+{
+  top:0;
+  z-index:52;
+  position:absolute;
+  width:100%;
+  height:100%;
+  overflow-y: auto;
+  overflow-x:hidden;
+}
+
+.iframe-content
+{
+  width:80%;
+  margin:auto;
+  position:relative;
+  opacity:0;
+}
+
+.shadow_gradient
+{
+  height:10vh;
+  width:100%;
+  position:absolute;
+  top:-10vh;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,020000+100&0+0,1+100 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(2,0,0,0.7) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(2,0,0,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(2,0,0,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#020000',GradientType=0 ); /* IE6-9 */
+}
+
+@media (max-width: 1279px) {
+  .gallery-desc
+  {
+    font-size:2.7em !important;
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "menu": {
+    "titleHome": "Home",
+    "subtitleHome": "genesis",
+    "Titleprojects": "Projects", 
+    "SubtitleProjects": "glimpse of the past",
+    "titleAbout": "About",
+    "subtitleAbout": "Aboutabout",
+    "MenuTagClose": "close",
+    "MenuTag": "Menu",
+    "cat1": "Display",
+    "cat2": "Webdesign",
+    "backBtn": "Back"
+  },
+  "HelperPanel": {
+    "closeBTN": "close",
+    "Panel1": {
+      "title": "Welcome",
+      "subtitle": "Choose your language",
+      "choice1": "Français",
+      "choice2": "English"
+    },
+    "Panel2": {
+      "title": "performances",
+      "subtitle": "WebGL animations",
+      "desc": "Deactivate webGL animations for better performances",
+      "choice1": "ON",
+      "choice2": "OFF"
+    },
+    "Panel3": {
+      "title": "All done !",
+      "subtitle": "your settings are saved",
+      "desc": "You can change these options in the menu"
+    }
+  },
+  "MailerPanel": {
+    "title": "Send a message",
+    "subtitle": "Get in touch",
+    "email": "Mail adress",
+    "subject": "Topic",
+    "message": "Message",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "sendingsubtitle": "Please wait",
+    "sent": "success !",
+    "errorsent": "Error !",
+    "errorsentsubtitle": "sorry try again",
+    "sentsubtitle": "Mail sent"
+  },
+  "Home": {
+    "Tagline":"Webdesigner & developer",
+    "MenuContentHome":
+      [
+        "References",
+        "Clients",
+        "React + Redux",
+        "Whatevar"
+      ]
+    ,
+    "SectionGenesis": {
+      "TitleGenesis": "welcome",
+      "BtnDownload": "Want to collaborate ?",
+      "BtnMore": "more about me",
+      "ParaphGenesis": [
+        {
+          "txt": "Hi I'm Jeremy, a freelance webdesigner & developer."
+        },
+        {
+          "txt":
+            "I spend my time on learning single-page application development with the lastest frameworks the web as to offer and, of course, use my background as a web designer and motion designer to make things beautiful and alive."
+        },
+        {
+          "txt":
+            "I work on <a href='https://reactjs.org/' tabindex='-1' target='_blank'>React</a> + <a href='https://redux.js.org/' tabindex='-1' target='_blank'>Redux</a> for the view layer. I use <a href='https://greensock.com/gsap' tabindex='-1' target='_blank'>GSAP</a> for fast and smooth animations,</br><a href='http://www.pixijs.com/' tabindex='-1' target='_blank'>PixiJS</a> for webgl effects and express for the backend"
+        },
+        {
+          "txt":
+            ""
+        }
+      ]
+    },
+    "SectionProject": {
+      "Title": "References",
+      "Paraph": [
+        {
+          "txt": "Some licenses i've worked on. See"
+        }
+      ]
+    }
+  }
+}
