@@ -1,5 +1,5 @@
 export default function NavCategoryButton(state = {
-  "button1":true, "button2":true
+  "button1":true, "button2":true, "button3":true
 }, action)
  {
    switch (action.type) {
@@ -12,6 +12,11 @@ export default function NavCategoryButton(state = {
          return state = {
            ...state,
            "button2":action.state
+         }
+         case 'ToogleBtn3':
+         return state = {
+           ...state,
+           "button3":action.state
          }
      default:
        return state

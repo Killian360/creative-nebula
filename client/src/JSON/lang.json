@@ -10,6 +10,7 @@
     "MenuTag": "Menu",
     "cat1": "Display",
     "cat2": "Webdesign",
+    "cat3": "Newsletter",
     "backBtn": "Back"
   },
   "HelperPanel": {
@@ -83,7 +84,7 @@
       "Title": "References",
       "Paraph": [
         {
-          "txt": "Some licenses i've worked on. See"
+          "txt": "Some licenses i've worked on."
         }
       ]
     }

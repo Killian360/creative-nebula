@@ -567,9 +567,9 @@ componentDidUpdate()
         x = x.toFixed(this.precision) + 'px';
         y = y.toFixed(this.precision) + 'px';
         if (this.transform3DSupport) {
-          this.css(element, 'transform', 'translate3d(' + x + ',' + y + ',0)');
+          TweenMax.to(element, 0.1,{transform:'translate3d(' + x + ',' + y + ',0)',  ease:Power1.easeOut});
         } else if (this.transform2DSupport) {
-          this.css(element, 'transform', 'translate(' + x + ',' + y + ')');
+          TweenMax.to(element, 0.1,{transform:'translate3d(' + x + ',' + y + ')',  ease:Power1.easeOut});
         } else {
           element.style.left = x;
           element.style.top = y;

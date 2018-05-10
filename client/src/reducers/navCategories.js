@@ -1,7 +1,8 @@
 export default function NavCategory(state = {
   "categories":[
   "webdesign",
-  "display"
+  "display",
+  "newsletter"
   ]
 }, action)
  {

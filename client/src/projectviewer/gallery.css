@@ -96,7 +96,6 @@
   /* background-position:center calc(10vh + 30px); */
   overflow: visible ;
   background-repeat: no-repeat;
-  transition:transform 0.1s ease-out;
 }
 
 .gallery--Layer--viewer
@@ -114,7 +113,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transition:transform 0.1s ease-out;
 }
 
 .gallery--front--viewer
@@ -133,7 +131,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  transition:transform 0.1s ease-out;
 }
 
 @media (max-width: 1000px) {
