@@ -57,7 +57,7 @@ export const animation = (animName, ID, direction, callback) => {
       TweenMax.fromTo(InfoClient, 0.2,{y:"0%"},{y:"-50%", delay:0.25,ease: Power1.easeOut});
 
       TweenMax.to(logo, 0.25, {bottom:'17%', ease: Power1.easeOut});
-      TweenMax.to(FrontIMG, 0.35, {scale:1.1,transformOrigin:'bottom center',ease: Power1.easeOut});
+      TweenMax.to(FrontIMG, 0.35, {scale:1.1,y:-5, transformOrigin:'bottom center',ease: Power1.easeOut});
       // TweenMax.set(FrontIMG, {webkitClipPath:'polygon(0 0, 100% 0, 100% 72%, 83% 72%, 83% 100%, 15% 100%, 15% 72%, 0 72%)'});
       TweenMax.to(infoBoxLosange, 0.2, {transform:'rotate(45deg) scale(1)', delay:0.2});
       TweenMax.to(infofilm, 0.2, {transform:'scale(1)', delay:0.2});
@@ -83,7 +83,7 @@ export const animation = (animName, ID, direction, callback) => {
           }
         })
         TweenMax.to(logo, 0.25, {bottom:'5%'});
-        TweenMax.to(FrontIMG, 0.2, {scale:1});
+        TweenMax.to(FrontIMG, 0.2, {scale:1, y:0});
         TweenMax.to(BGIMG, 0.2, {opacity:1});
         TweenMax.to(Container, 0.2, {
           scale: 1,
@@ -93,7 +93,7 @@ export const animation = (animName, ID, direction, callback) => {
           opacity: 0.9,
           ease: Power1.easeOut
         });
-        TweenMax.to(Container, 0.1, {
+        TweenMax.to(ProjectBox, 0.1, {
           css: {
             boxShadow: '0px 0px 0px 0px rgba(0,0,0,0)',
           }

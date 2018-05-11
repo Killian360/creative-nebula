@@ -159,7 +159,7 @@ export const animation = (animName, topdata, delaydata, direction, history) => {
       TweenMax.set("#RSLinks", { y:20, opacity:0 });
       TweenMax.to(MenuBtn, 0.2, { top: "1.5vw", ease: Power1.easeOut });
       TweenMax.to(menuTag, 0.2, { opacity: 0, x: -20, ease: Power1.easeOut });
-      TweenMax.staggerTo(".NavTitle",0.35, { y:0 , opacity:1, delay:0.2, ease:Power4.easeOut}, 0.1);
+      TweenMax.staggerTo(".NavTitle",0.3, { y:0 , opacity:1, delay:0.2, ease:Power4.easeOut}, 0.1);
       TweenMax.to("#RSLinks",0.45, { y:0, opacity:1 ,delay:0.3, ease:Power4.easeOut});
 
       // TweenMax.set(NavPanel,{left:"155%",transform:"skewX(30deg)", ease: Power1.easeOut});
@@ -180,7 +180,7 @@ export const animation = (animName, topdata, delaydata, direction, history) => {
       });
       break;
     case "PanelClose":
-    TweenMax.staggerTo(".PanelTitle", 0.05, {y:-100},0.07);
+    TweenMax.staggerTo(".PanelTitle", 0.05, {y:-100, ease:Power1.easeOut},0.07);
     TweenMax.to("#RSLinks", 0.2,{opacity:0});
       TweenMax.fromTo(
         contentViewer,

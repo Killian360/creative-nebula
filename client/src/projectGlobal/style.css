@@ -126,6 +126,7 @@ z-index:5;
   z-index:4;
   min-height:43px;
   z-index:15000;
+  pointer-events:none;
 }
 
 .InfoBox-gradient
@@ -139,32 +140,33 @@ z-index:5;
 {
   width:73%;
 position:absolute;
-height:63%;
-top:30vh;
+top:calc(10vh + 60px);
 right:5vw;
 }
 
 .Tilt:hover
 {
-  z-index:10000;
+  z-index:16000;
 }
 
 .TiltFront
 {
-  z-index:15000;
   z-index: 15000;
   height: 100%;
   position: absolute;
   left:0;
   right:0;
   margin:auto;
+  overflow:hidden;
 }
 
+.TiltFront:hover
+{
+  overflow:visible;
+}
 
 #projectsContainer .Tilt
 {
-  width: 60%;
-  margin-left:2.5vw;
   float:left;
   box-shadow: 0px 0px 20px 7px #0e034e;
 }    
@@ -190,6 +192,7 @@ position: relative;
   max-width:1500px;
   display:flex;
   flex-flow: row wrap;
+  margin-bottom:5vh;
 }
 
 #projectsContainer::after
@@ -243,7 +246,7 @@ position: relative;
   font-weight:400;
   font-size: 2.3em;
   padding:0 0px;
-  color:#725bf7;
+  color:#9dc3ff;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   opacity:1;
@@ -302,7 +305,7 @@ position: relative;
 {
   background-color: rgba(2,120,150,0.3);
   position: fixed!important;
-    width: 4px !important;
+    width: 5px !important;
     right: 0;
     bottom: 0px;
     top: 0;
@@ -364,8 +367,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', e
 {
   width:100%;
   z-index:3;
-  top:-20%;
-  height:120%;
+  top:0%;
+  bottom:0px;
+  height:100%;
   position:absolute;
   background-size: cover;
   background-position: center;
@@ -416,8 +420,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00999999', e
 {
   position:absolute;
   background-color: #FFF;
-  opacity:0.8;
-  width:6px !important;
+  opacity:1;
+  width:10px !important;
   cursor:pointer;
   transition: all 0.05s;
 }
@@ -621,25 +625,26 @@ animation: dash 5s linear infinite; */
 
 .ProjectWrapperMain
 {
-  width:100%;
-  margin-bottom:20vh;
+  width:21%;
   position:relative;
   left:0;
   right:0;
+  margin-right:2%;
+  margin-left:2%;
 }
 
 .projectBox
 {
   position:relative;
   width:100%;
-  height:60%;
+  height:37vh;
   left:0;
   right:0;
   background-color: #222286;
   overflow:visible;
 cursor:pointer;
 animation: all 0.2s;
-min-height: 0;
+min-height: 300px;
 min-width: 320px;
 -webkit-touch-callout: none;
 -webkit-user-select: none;

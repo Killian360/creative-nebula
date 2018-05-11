@@ -115,7 +115,6 @@ desactivationclick() {
          </Tilt>
          <HelperIcons /> */}
           <div className={"PanelWrapperText" + (isMatch.url==="/" || isMatchLast[3] ==="content" ? " inactive" : "")} onClick={() => this.switchRoute(store.getState().HOMEPREV_URL.url, window.innerWidth)}>
-          {isWebGlOn === true && this.state.homeHover === true && <WebglIco ID="Webgl_ico_home" />}
                 <li className={"PanelTitle"} >
                 <span className="NavTitleTransparent">{store.getState().LANG.JsonLang.menu.titleHome}</span>
                 <span className="NavTitle">

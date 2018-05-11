@@ -354,7 +354,7 @@ iframe {
   margin: auto;
   height: auto;
   top: 0;
-  margin-top: 16vh;
+  margin-top:calc(10vh + 60px);
   max-width:1200px;
   text-align:center;
 }
@@ -654,7 +654,7 @@ a:hover {
 #TagLine {
   text-align: center;
   font-size: 3em;
-  color: #3e8dff;
+  color: #9dc3ff;
   font-family: "Radiance", sans-serif;
   letter-spacing: 0.15em;
   word-spacing: 1rem;

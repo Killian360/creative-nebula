@@ -36,7 +36,7 @@ class ScrollBarProject extends React.Component{
        super(props, context);
        this.ProjectList=[];
        this.NewList=[];
-       this.OldList = [];
+       this.OldList=[];
        this.isFirst = true;
        this.appear = true;
        this.appearBox = this.appearBox.bind(this);
@@ -54,12 +54,12 @@ class ScrollBarProject extends React.Component{
 
     updateMargin()
     {
-    //  var getMargin = document.getElementById('middle_earth');
-    //  var projectbox = document.getElementsByClassName('Tilt');
+     var getMargin = document.getElementById('middle_earth');
+     var projectbox = document.getElementsByClassName('Tilt');
 
-    //  var style = getMargin.currentStyle || window.getComputedStyle(getMargin);
+     var style = getMargin.currentStyle || window.getComputedStyle(getMargin);
 
-    //  TweenMax.set(projectbox,{marginTop:style.marginLeft, marginBottom:style.marginLeft});
+     TweenMax.set(projectbox,{marginTop:style.marginLeft});
 
     //  var infogame = document.getElementsByClassName('Infogame');
     //  var infofilm =  document.getElementsByClassName('Infofilm');
@@ -91,6 +91,7 @@ class ScrollBarProject extends React.Component{
 UpdateList()
 {
   this.newlist = [];
+
   for (var t = 0; t < store.getState().LANG.JsonProjects.projets.length; t++) {
   for (var j = 0; j < store.getState().NavCategory.categories.length; j++)
     {
@@ -101,8 +102,9 @@ UpdateList()
           this.newlist.push(store.getState().LANG.JsonProjects.projets[t]);
         }
       }
+      }
     }
-  }
+
     if (this.appear === true)
     {
       for (var z = 0; z < this.newlist.length; z++)
@@ -114,17 +116,19 @@ UpdateList()
       TweenMax.to(".projectbox", 0.25, {onComplete:this.appearBox});
       this.appear = false;
     } else {
-      TweenMax.to(".ProjectWrapperMain", 0.25, {opacity:0,display:'none', onComplete:this.appearBox});
+      TweenMax.to(".ProjectWrapperMain", 0.25, {opacity:0, scale:0.5, display:'none', onComplete:this.appearBox});
     }
 }
 
 appearBox()
 {
 let array = this.newlist;
+let delay = 0;
   for (var p = 0; p < array.length; p++) {
   var projectbox = document.getElementsByClassName("ProjectWrapperMain "+ array[p].id);
   TweenMax.set(projectbox,{display:'block'});
-  TweenMax.to(projectbox, 0.3, {opacity:0.9,scale:1,ease: Power1.easeOut});
+  TweenMax.to(projectbox, 0.3, {opacity:0.9,scale:1, delay:delay*0.05, ease: Power1.easeOut});
+  delay++;
  }
 }
 
@@ -425,13 +429,13 @@ changeURL(ID)
            <div id="projectFrame">
            <section id="projectsContainer">
              {this.ProjectList.map((o, i) =>
-             <div key={o.id}  className={"ProjectWrapperMain "+ o.id}>
-             <div className="ProjectWrapperInfo">
+             <div key={o.id} id={o.id} className={"ProjectWrapperMain "+ o.id}   onMouseEnter={() => this.Hover(o.id)} onMouseLeave={() => this.Out(o.id)}>
+             {/* <div className="ProjectWrapperInfo">
              <li className="TitleProjectWrapper" >{o.name}</li>
              <li className="ClientProjectWrapper" >{o.client}</li>
-             </div>
+             </div> */}
              <Tilt className="Tilt" options={{ max : 5, scale:1.05 }}>
-               <div className={"projectBox " + o.id} id={o.id} onMouseEnter={() => this.Hover(o.id)} onMouseLeave={() => this.Out(o.id)} >
+               <div className={"projectBox " + o.id} >
                <div className="gradientAnimTop"></div>
                <div className="gradientAnimRight"></div>
                <div onClick={() => this.handleclick(o.id)}>
