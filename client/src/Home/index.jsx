@@ -85,6 +85,7 @@ class Home extends React.Component {
       store.dispatch({ type: "NAVIGATIONhomeON" });
       store.dispatch({ type: "NAVIGATIONWhite" });
     } else if (this.slideNbr === 1) {
+      animate.animation("resetSlideProject");
       store.dispatch({ type: "NAVIGATIONBlue" });
       store.dispatch({ type: "NAVIGATIONhomeOFF" });
     } else {
