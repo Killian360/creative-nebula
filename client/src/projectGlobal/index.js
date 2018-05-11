@@ -76,13 +76,13 @@ class ScrollBarProject extends React.Component{
   componentDidUpdate(prevProps, prevState)
   {
     const { scrollbars } = this.refs;
-    if (prevProps.NavCategory !== this.props.NavCategory)
+    console.log(prevProps.NavCategory);
+    console.log(this.props.NavCategory);
+
+    this.UpdateList(scrollbars.getScrollTop());
+    if (scrollbars.getScrollTop()>0)
     {
-      this.UpdateList(scrollbars.getScrollTop());
-      if (scrollbars.getScrollTop()>0)
-      {
         scrollbars.scrollTop(0);
-      }
     }
     return null;
   }
@@ -116,7 +116,7 @@ UpdateList()
       TweenMax.to(".projectbox", 0.25, {onComplete:this.appearBox});
       this.appear = false;
     } else {
-      TweenMax.to(".ProjectWrapperMain", 0.25, {opacity:0, scale:0.5, display:'none', onComplete:this.appearBox});
+      TweenMax.to(".ProjectWrapperMain", 0.15, {opacity:0, scale:0.5, display:'none', onComplete:this.appearBox});
     }
 }
 
@@ -127,7 +127,7 @@ let delay = 0;
   for (var p = 0; p < array.length; p++) {
   var projectbox = document.getElementsByClassName("ProjectWrapperMain "+ array[p].id);
   TweenMax.set(projectbox,{display:'block'});
-  TweenMax.to(projectbox, 0.3, {opacity:0.9,scale:1, delay:delay*0.05, ease: Power1.easeOut});
+  TweenMax.to(projectbox, 0.2, {opacity:0.9,scale:1, delay:delay*0.05, ease: Power1.easeOut});
   delay++;
  }
 }

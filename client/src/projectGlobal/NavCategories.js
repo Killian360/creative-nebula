@@ -76,8 +76,18 @@ Toogle1(type) {
   let Btn = document.getElementsByClassName("NavBtn");
   let {toogle1, toogle2, toogle3} = this;
 
-      (toogle1=== false && toogle2 === false && toogle3 === false) ? toogle1=true && (this.toogle1=!this.toogle1) : store.dispatch({type: 'ToogleBtn1', state:toogle1});
-      toogle1 === false ? store.dispatch({type: 'REMOVE_CAT', cat:type }) : store.dispatch({type: 'ADD_CAT', cat:type });
+
+  if (toogle1=== false && toogle2 === false && toogle3 === false)
+  {
+    toogle1=true
+  } else if (toogle1 === false)
+  {
+    store.dispatch({type: 'ToogleBtn1', state:toogle1})
+    store.dispatch({type: 'REMOVE_CAT', cat:type })
+  } else if (toogle1 === true && (toogle2 === true || toogle3 === true)) {
+    store.dispatch({type: 'ToogleBtn1', state:toogle1})
+    store.dispatch({type: 'ADD_CAT', cat:type })
+  }      
 
       TweenMax.set(Btn, {pointerEvents: 'none'});
       TweenMax.set(Btn,{pointerEvents: 'auto', delay:0.4});
@@ -91,8 +101,17 @@ Toogle1(type) {
    let Btn = document.getElementsByClassName("NavBtn");
    let {toogle1, toogle2, toogle3} = this;
 
-   (toogle1=== false && toogle2 === false && toogle3 === false) ? toogle2=true && (this.toogle2=!this.toogle2) : store.dispatch({type: 'ToogleBtn2', state:toogle2});
-   (toogle2 === false) ? store.dispatch({type: 'REMOVE_CAT', cat:type }) : store.dispatch({type: 'ADD_CAT', cat:type });
+   if (toogle1=== false && toogle2 === false && toogle3 === false)
+   {
+     toogle2=true
+   } else if (toogle2 === false)
+   {
+     store.dispatch({type: 'ToogleBtn2', state:toogle2})
+     store.dispatch({type: 'REMOVE_CAT', cat:type })
+   } else if (toogle2 === true && (toogle1 === true || toogle3 === true)) {
+     store.dispatch({type: 'ToogleBtn2', state:toogle2})
+     store.dispatch({type: 'ADD_CAT', cat:type })
+   }   
 
    TweenMax.set(Btn, {pointerEvents: 'none'});
    TweenMax.set(Btn,{pointerEvents: 'auto', delay:0.4});
@@ -106,8 +125,17 @@ Toogle3(type) {
   let Btn = document.getElementsByClassName("NavBtn");
   let {toogle1, toogle2, toogle3} = this;
 
-  (toogle1=== false && toogle2 === false && toogle3 === false) ? toogle3=true && (this.toogle3=!this.toogle3) : store.dispatch({type: 'ToogleBtn3', state:toogle3});
-  (toogle3 === false) ? store.dispatch({type: 'REMOVE_CAT', cat:type }) : store.dispatch({type: 'ADD_CAT', cat:type });
+  if (toogle1=== false && toogle2 === false && toogle3 === false)
+  {
+    toogle3=true
+  } else if (toogle3 === false)
+  {
+    store.dispatch({type: 'ToogleBtn3', state:toogle3})
+    store.dispatch({type: 'REMOVE_CAT', cat:type })
+  } else if (toogle3 === true && (toogle1 === true || toogle2 === true)) {
+    store.dispatch({type: 'ToogleBtn3', state:toogle3})
+    store.dispatch({type: 'ADD_CAT', cat:type })
+  }     
 
   TweenMax.set(Btn, {pointerEvents: 'none'});
   TweenMax.set(Btn,{pointerEvents: 'auto', delay:0.4});
