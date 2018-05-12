@@ -3,25 +3,30 @@ import { store } from "../../reducers/combinereducers.js";
 import { connect } from "react-redux";
 import SliderIndexProjects from "./SliderIndexProjects/slider";
 import { TweenMax, Power1 } from "gsap";
+import ReactTransitionGroup from 'react-addons-transition-group'
 
 const mapStateToProps = state => {
   return {
     LANG: state.LANG,
     HOMESLIDE: state.HOMESLIDE,
-    CONTENTHOMESLIDE: state.CONTENTHOMESLIDE
+    CONTENTHOMESLIDE: state.CONTENTHOMESLIDE,
   };
 };
 
-class SectionProject extends React.PureComponent {
+class SectionProject extends React.Component {
+
   render() {
-
+    const isMatchLast = window.location.href.split( '/' );
+    const lastmatch = isMatchLast[4];
     const {HOMESLIDE, CONTENTHOMESLIDE, LANG} = this.props;
-
+    console.log(CONTENTHOMESLIDE);
     return (
       <section className="HomeSection" id={"content-" + this.props.IndexID}>
         <div className="InnerContentWork">
-          {(HOMESLIDE.slide === 2 && CONTENTHOMESLIDE.contentSlide>=0) && <Title LANG={LANG} />}
-          {(HOMESLIDE.slide === 2 && CONTENTHOMESLIDE.contentSlide>=0) && <SliderIndexProjects />}
+        <ReactTransitionGroup>
+          {(CONTENTHOMESLIDE.contentSlide >= 1) && <Title key="TitleReferences" LANG={LANG} />}
+          {(CONTENTHOMESLIDE.contentSlide >= 1) && <SliderIndexProjects key="SliderIndex" />}
+          </ReactTransitionGroup>
         </div>
       </section>
     );
@@ -33,11 +38,23 @@ class Title extends React.Component {
 
   componentDidMount()
   {
-    TweenMax.set(".title.White",{opacity:0, y:15});
-    TweenMax.set(".ParagraphWhite",{opacity:0, y:15});
-    TweenMax.to(".title.White",0.25,{opacity:1, y:0, delay:0.45, ease:Power1.easeOut});
-    TweenMax.to(".ParagraphWhite",0.25,{opacity:1, y:0, delay:0.55, ease:Power1.easeOut});
+
   }
+
+  componentDidEnter(callback)
+{
+  TweenMax.set(".title.White",{opacity:0, y:15});
+  TweenMax.set(".ParagraphWhite",{opacity:0, y:15});
+  TweenMax.to(".title.White",0.25,{opacity:1, y:0, delay:0.15, ease:Power1.easeOut});
+  TweenMax.to(".ParagraphWhite",0.25,{opacity:1, y:0, delay:0.25, ease:Power1.easeOut, onComplete:callback});
+  console.log('mounting')
+}
+
+componentWillLeave(callback)
+{
+  TweenMax.to(".title.White",0.25,{opacity:0, ease:Power1.easeOut});
+  TweenMax.to(".ParagraphWhite",0.25,{opacity:0,ease:Power1.easeOut, onComplete:callback});
+}
 
   shouldComponentUpdate(prevProps)
   {
@@ -54,7 +71,7 @@ class Title extends React.Component {
           {store
             .getState()
             .LANG.JsonLang.Home.SectionProject.Paraph.map(paraph => (
-              <span className="lolol" key={paraph.txt}>
+              <span key={paraph.txt}>
                 <div dangerouslySetInnerHTML={{ __html: paraph.txt }} />
               </span>
             ))}

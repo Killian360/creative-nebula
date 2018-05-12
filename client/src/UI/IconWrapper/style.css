@@ -160,6 +160,17 @@ animation: dash 5s linear infinite; */
     width:47%;
 }
 
+.ConfigIcon
+{
+  position:absolute;
+  left: 0;
+  right:0;
+  margin:auto;
+    top: 50%;
+    transform:translateY(-49%);
+    width:25px;
+}
+
 .mailIcon
 {
   position:absolute;

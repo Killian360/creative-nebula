@@ -11,6 +11,7 @@ import SectionTitle from "./sections/SectionTitle";
 import SectionGenesis from "./sections/SectionGenesis";
 import SectionProject from "./sections/SectionProject";
 import SectionClients from "./sections/SectionClients";
+import SectionReactRedux from "./sections/SectionReactRedux";
 
 import * as animate from "./animation";
 import ProjectScrollbar from "../Scrollbars/projectScrollbar";
@@ -108,6 +109,11 @@ class Home extends React.Component {
     const scrollbars = this.scrollbarsRef;
     let TargetBound = document.getElementById("content-"+this.props.match.params.contentID).offsetTop;
     scrollbars.scrollTop(TargetBound);
+
+    this.props.match.params.contentID === "React+Redux" && store.dispatch({type: 'getContentSlide', text:1});
+    this.props.match.params.contentID === "References" && store.dispatch({type: 'getContentSlide', text:2});
+
+
     }
     setTimeout(()=>this.isInit=false, 300);
   }
@@ -209,8 +215,7 @@ class Home extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-
-    if (prevProps.HOMESLIDE !== this.props.HOMESLIDE) {
+    if (prevProps.HOMESLIDE != this.props.HOMESLIDE) {
       if (this.slideNbr === 0) {
         store.dispatch({ type: "NAVIGATIONhomeON" });
         store.dispatch({ type: "NAVIGATIONWhite" });
@@ -225,16 +230,16 @@ class Home extends React.Component {
 
         store.dispatch({ type: "NAVIGATIONBlue" });
         store.dispatch({ type: "NAVIGATIONhomeOFF" });
-      } else if (this.slideNbr!==prevProps.slideNbr && this.slideNbr === 2) {
+      } else if (this.slideNbr === 2) {
         animate.animation("SlideProjectDisapear");
         animate.animation("callSlideProject");
         store.dispatch({ type: "NAVIGATIONWhite" });
       }
     }
-
+    
     if (this.props.match.url==="/" && this.slideNbr!==prevProps.slideNbr && this.slideNbr>=2)
     {
-      this.props.history.push("/content/References");
+      this.props.history.push("/content/React+Redux");
     }
 
     // if (this.props.match.params.contentID!= prevProps.match.params.contentID)
@@ -267,10 +272,11 @@ class Home extends React.Component {
     }
   }
 
-  shouldComponentUpdate(prevProps)
-  {
-    return prevProps != this.props ? true : false;
-  }
+  // shouldComponentUpdate(nextProps)
+  // {
+  // console.log(nextProps.HOMESLIDE);
+  // return  nextProps.HOMESLIDE != this.props.HOMESLIDE ? true : false;
+  // }
 
   handleScrollStart()
   {
@@ -327,9 +333,9 @@ class Home extends React.Component {
               onScrollStop={this.handleScrollStop.bind(this)}
               onScrollStart={this.handleScrollStart.bind(this)}
               >
+              <SectionReactRedux IndexID="React+Redux"/>
               <SectionProject IndexID="References"/>
               <SectionClients IndexID="Clients"/>
-              <SectionClients IndexID="React+Redux"/>
               <SectionClients IndexID="test3" Title="test3"/>
               {/* <SectionProject IndexID="Clients" />
               <SectionProject IndexID="chiwawa" />
@@ -354,19 +360,15 @@ class MenuContent extends React.Component {
     this.isClickedToNav=true;
   }
 
-  onClickToScroll(URL)
+  onClickToScroll(URL, index)
   {
     if (this.isClickedToNav===true)
     {
     this.isClickedToNav=false;
     this.isScrollingActive=false;
     this.props.History.push("/content/"+ URL);
+    store.dispatch({type: 'getContentSlide', text:index});
     }
-  }
-
-  shouldComponentUpdate(prevProps)
-  {
-    return true;
   }
 
   componentDidMount()
@@ -387,7 +389,7 @@ class MenuContent extends React.Component {
           <li
             className={"LinkContentNav" + (param===o.props.IndexID ? ' ActiveLink' : '')}
             id={o.props.IndexID}
-            onClick={()=> this.onClickToScroll(o.props.IndexID)}
+            onClick={()=> this.onClickToScroll(o.props.IndexID, index)}
           >
           {store.getState().LANG.JsonLang.Home.MenuContentHome[index]}
           </li>

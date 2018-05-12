@@ -15,10 +15,10 @@ export default class ProjectScrollbar extends Component {
         this.spring.addListener({ onSpringUpdate: this.handleSpringUpdate });
     }
 
-    shouldComponentUpdate(prevProps)
-    {
-      return this.props != prevProps ? true : false;  
-    }
+    // shouldComponentUpdate(prevProps)
+    // {
+    //   return this.props != prevProps ? true : false;  
+    // }
 
     componentWillUnmount() {
         this.springSystem.deregisterSpring(this.spring);

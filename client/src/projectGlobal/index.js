@@ -247,7 +247,7 @@ handleclick(ID)
 
 shouldComponentUpdate(prevProps)
 {
-  return this.props != prevProps ? true : false
+  return this.props.NavCategory != prevProps.NavCategory ? true : false
 }
 
 changeURL(ID)

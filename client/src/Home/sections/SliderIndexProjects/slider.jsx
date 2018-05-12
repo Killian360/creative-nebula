@@ -5,7 +5,7 @@ import "./style.css"
 import { TweenMax, Power3, Power1} from "gsap";
 import { withRouter } from "react-router";
 import Tilt from 'react-tilt';
-
+import { NavLink } from 'react-router-dom'
 
 class SliderIndexProjects extends React.Component {
 
@@ -13,7 +13,7 @@ class SliderIndexProjects extends React.Component {
     super(props);
     this.changeIndex = this.changeIndex.bind(this);
     this.changeIndexBefore = this.changeIndexBefore.bind(this);
-    this.changeURL = this.changeURL.bind(this);
+    // this.changeURL = this.changeURL.bind(this);
     this.TrackMouse = this.TrackMouse.bind(this);
       this.state = {
         showNbr:1
@@ -22,8 +22,8 @@ class SliderIndexProjects extends React.Component {
 
   componentDidMount()
   {
-    TweenMax.set(".SliderWorkWrapper",{opacity:0, y:100});
-    TweenMax.to(".SliderWorkWrapper",0.55,{opacity:1,y:0, delay:0.45, ease:Power3.easeOut});
+    TweenMax.set(".SliderWorkWrapper",{opacity:0, y:30});
+    TweenMax.to(".SliderWorkWrapper",0.55,{opacity:1,y:0, delay:0.1, ease:Power1.easeOut});
     const wrapperWidth = document.getElementById('TransitionWrapper').getBoundingClientRect().width;
     const TransitionWrapper = document.getElementById('TransitionWrapper');
 
@@ -34,6 +34,12 @@ class SliderIndexProjects extends React.Component {
 
     window.addEventListener("mousemove", this.TrackMouse);
   }
+
+  componentWillLeave(callback)
+{
+  TweenMax.to(".SliderWorkWrapper",0.25,{opacity:0,ease:Power1.easeOut, onComplete:callback});
+}
+
 
   TrackMouse(e)
   {
@@ -63,21 +69,21 @@ class SliderIndexProjects extends React.Component {
     return false;
   }
 
-  handleclick(ID)
-  {
-    const TransitionWrapper = document.getElementById('TransitionWrapper');
-    this.URL = ID;
+  // handleclick(ID)
+  // {
+  //   const TransitionWrapper = document.getElementById('TransitionWrapper');
+  //   this.URL = ID;
   
-    TweenMax.set(TransitionWrapper,{x:this.MouseX, y:this.MouseY,xPercent:'-50', yPercent:'-50', opacity:1,transformOrigin:'center center'})
-    TweenMax.to(TransitionWrapper,0.25,{display:'block',scale:3,opacity:1, ease:Power1.easeIn});
+  //   TweenMax.set(TransitionWrapper,{x:this.MouseX, y:this.MouseY,xPercent:'-50', yPercent:'-50', opacity:1,transformOrigin:'center center'})
+  //   TweenMax.to(TransitionWrapper,0.25,{display:'block',scale:3,opacity:1, ease:Power1.easeIn});
   
-    setTimeout(this.changeURL, 270);
-  }
+  //   setTimeout(this.changeURL, 270);
+  // }
 
-  changeURL(URL)
-  {
-    this.props.history.push('/projects/' + this.URL);
-  }
+  // changeURL(URL)
+  // {
+  //   this.props.history.push('/projects/' + this.URL);
+  // }
 
   handleHover(ID)
   {
@@ -132,13 +138,14 @@ class SliderIndexProjects extends React.Component {
           </div>
           </li>
           {/* <li className="SliderClient">{o.client}</li> */}
-          <li onClick={() => this.handleclick(o.id)} onMouseEnter={() => this.handleHover(o.id)} onMouseLeave={() => this.handleOut(o.id)} className="SliderLink">Go to project
+          <NavLink to={"/projects/" + o.id}><li onMouseEnter={() => this.handleHover(o.id)} onMouseLeave={() => this.handleOut(o.id)} className="SliderLink">Go to project
           <div className={"SliderLinkTagArrow " + o.id}>
           <svg x="0px" y="0px" className="SliderLinkTagBtnSVG" viewBox="0 0 31.494 31.494">
         <path transform="scale(-1) translate(-31.494,-31.494)"  d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554  c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587  c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z" fill="#FFFFFF"/>
 </svg>
 </div>
           </li>
+          </NavLink>
           </div>
           </div>
         ))}
@@ -159,4 +166,4 @@ const SVGtag = () => (
 )
 
 
-export default withRouter(SliderIndexProjects);
+export default SliderIndexProjects
