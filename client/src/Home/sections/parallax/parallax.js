@@ -1,7 +1,8 @@
 import React from "react";
 import {connect} from 'react-redux';
 import {
-  TweenMax
+  TweenMax,
+  Power1
 } from "gsap";
 import Particles from 'react-particles-js';
 
@@ -505,9 +506,9 @@ shouldComponentUpdate(prevProps)
         x = x.toFixed(this.precision) + 'px';
         y = y.toFixed(this.precision) + 'px';
         if (this.transform3DSupport) {
-          this.css(element, 'transform', 'translate3d(' + x + ',' + y + ',0)');
+          TweenMax.to(element, 0.1,{transform:'translate3d(' + x + ',' + y + ',0)',  ease:Power1.easeOut});
         } else if (this.transform2DSupport) {
-          this.css(element, 'transform', 'translate(' + x + ',' + y + ')');
+          TweenMax.to(element, 0.1,{transform:'translate3d(' + x + ',' + y + ')',  ease:Power1.easeOut});
         } else {
           element.style.left = x;
           element.style.top = y;
@@ -670,8 +671,8 @@ shouldComponentUpdate(prevProps)
       <React.Fragment>
       <div className="HomeWrapperParallax">
         <div className="content--gallery--viewer--home">
-          <ul id="scene" ref={this.loadedElement} className="scene--viewer" data-limit-y="60" data-limit-x="100">
-            <li className="layer parallaxStars" data-depth="0.02">
+          <ul id="scene" ref={this.loadedElement} className="scene--viewer" data-limit-y="30" data-limit-x="100">
+            <li className="layer parallaxStars" data-depth="0.04">
               <Particles
               params={{
                 "particles": {
@@ -779,7 +780,7 @@ shouldComponentUpdate(prevProps)
               }}
               />
             </li>
-            <li className="layer parallaxStars" data-depth="0.08">
+            <li className="layer parallaxStars" data-depth="0.09">
               <Particles
               params={{
                 "particles": {
@@ -887,6 +888,114 @@ shouldComponentUpdate(prevProps)
               }}
               />
             </li>
+            <li className="layer parallaxStars" data-depth="0.12">
+              <Particles
+              params={{
+                "particles": {
+          "number": {
+          "value": 20,
+          "density": {
+          "enable": true,
+          "value_area": 900
+          }
+          },
+          "color": {
+          "value": "#ffffff"
+          },
+          "shape": {
+          "type": "circle",
+          "stroke": {
+          "width": 0,
+          "color": "#000000"
+          },
+          "polygon": {
+          "nb_sides": 5
+          }
+          },
+          "opacity": {
+          "value": 1,
+          "random": true,
+          "anim": {
+          "enable": true,
+          "speed": 0.6,
+          "opacity_min": 0,
+          "sync": false
+          }
+          },
+          "size": {
+          "value": 1,
+          "random": true,
+          "anim": {
+          "enable": true,
+          "speed": 0,
+          "size_min": 0.3,
+          "sync": false
+          }
+          },
+          "line_linked": {
+          "enable": false,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+          },
+          "move": {
+          "enable": true,
+          "speed": 0.3,
+          "direction": "none",
+          "random": true,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 600
+          }
+          }
+          },
+          "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+          "onhover": {
+          "enable": false,
+          "mode": "repulse"
+          },
+          "onclick": {
+          "enable": false,
+          "mode": "repulse"
+          },
+          "resize": false
+          },
+          "modes": {
+          "grab": {
+          "distance": 400,
+          "line_linked": {
+            "opacity": 1
+          }
+          },
+          "bubble": {
+          "distance": 250,
+          "size": 10,
+          "duration": 2,
+          "opacity": 0,
+          "speed": 3
+          },
+          "repulse": {
+          "distance": 400,
+          "duration": 0.4
+          },
+          "push": {
+          "particles_nb": 4
+          },
+          "remove": {
+          "particles_nb": 2
+          }
+          }
+          }
+              }}
+              />
+            </li>  
           </ul>
         </div>
       </div>

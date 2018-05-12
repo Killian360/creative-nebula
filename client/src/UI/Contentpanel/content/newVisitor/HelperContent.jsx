@@ -199,6 +199,7 @@ closeHelper()
           </span>
         </div>
       </div>
+      <div className="HelperDesc">{store.getState().LANG.JsonLang.HelperPanel.Panel1.desc}</div>
       </div>
     </div>
     <div>

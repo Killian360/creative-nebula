@@ -19,7 +19,6 @@ class SectionProject extends React.Component {
     const isMatchLast = window.location.href.split( '/' );
     const lastmatch = isMatchLast[4];
     const {HOMESLIDE, CONTENTHOMESLIDE, LANG} = this.props;
-    console.log(CONTENTHOMESLIDE);
     return (
       <section className="HomeSection" id={"content-" + this.props.IndexID}>
         <div className="InnerContentWork">
@@ -45,9 +44,8 @@ class Title extends React.Component {
 {
   TweenMax.set(".title.White",{opacity:0, y:15});
   TweenMax.set(".ParagraphWhite",{opacity:0, y:15});
-  TweenMax.to(".title.White",0.25,{opacity:1, y:0, delay:0.15, ease:Power1.easeOut});
-  TweenMax.to(".ParagraphWhite",0.25,{opacity:1, y:0, delay:0.25, ease:Power1.easeOut, onComplete:callback});
-  console.log('mounting')
+  TweenMax.to(".title.White",0.25,{opacity:1, y:0, delay:0.1, ease:Power1.easeOut});
+  TweenMax.to(".ParagraphWhite",0.25,{opacity:1, y:0, delay:0.1, ease:Power1.easeOut, onComplete:callback});
 }
 
 componentWillLeave(callback)

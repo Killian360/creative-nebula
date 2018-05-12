@@ -76,15 +76,16 @@ class ScrollBarProject extends React.Component{
   componentDidUpdate(prevProps, prevState)
   {
     const { scrollbars } = this.refs;
-    console.log(prevProps.NavCategory);
-    console.log(this.props.NavCategory);
-
+  if (this.props.NavCategory != prevProps.NavCategory)
+  {
     this.UpdateList(scrollbars.getScrollTop());
     if (scrollbars.getScrollTop()>0)
     {
         scrollbars.scrollTop(0);
     }
     return null;
+  }
+
   }
 
 
@@ -243,11 +244,6 @@ handleclick(ID)
   TweenMax.to(TransitionWrapper,0.25,{display:'block',scale:3,opacity:1, ease:Power1.easeIn});
 
   setTimeout(this.changeURL, 270);
-}
-
-shouldComponentUpdate(prevProps)
-{
-  return this.props.NavCategory != prevProps.NavCategory ? true : false
 }
 
 changeURL(ID)

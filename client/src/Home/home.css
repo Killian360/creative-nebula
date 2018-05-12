@@ -649,11 +649,11 @@ a:hover {
 
 #TagLine {
   text-align: center;
-  font-size: 3em;
+  font-size: 2.5em;
   color: #9dc3ff;
   font-family: "Radiance", sans-serif;
   letter-spacing: 0.15em;
-  word-spacing: 1rem;
+  word-spacing: 0.6rem;
   font-weight: 200;
   position: relative;
   bottom: 0px;

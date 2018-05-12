@@ -392,7 +392,7 @@ box-sizing: border-box;
   color:#FFF;
   font-size: 1.5em;
   margin-bottom:1rem;
-  font-family: Radiance-semi;
+  font-family: "Radiance";
 }
 
 .BackTagBtn.whiteNav
@@ -431,7 +431,7 @@ color:#06197b;
   font-size: 3.4em;
   color:#FFF;
   margin-bottom:1rem;
-  font-family: Radiance-semi;
+  font-family: "Radiance";
 }
 
 .ProjectRole p

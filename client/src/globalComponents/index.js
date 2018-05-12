@@ -20,7 +20,7 @@ class GlobalComponent extends React.Component {
   componentDidMount() {
     const { cookies } = this.props;
 
-    // cookies.remove('NewVisiter');
+    cookies.remove('NewVisiter');
 
     cookies.get("NewVisiter") === undefined
       ? cookies.set("NewVisiter", "true", { path: "/" })

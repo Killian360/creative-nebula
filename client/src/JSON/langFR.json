@@ -16,7 +16,8 @@
     "closeBTN": "fermer",
     "Panel1": {
       "title": "Bienvenue",
-      "subtitle": "Choisis ta langue",
+      "subtitle": "Choisissez votre langue",
+      "desc": "Ce site utilise des cookies pour sauvegarder vos préférences",
       "choice1": "Français",
       "choice2": "English"
     },
@@ -28,7 +29,7 @@
       "choice2": "OFF"
     },
     "Panel3": {
-      "title": "All done !",
+      "title": "C'est fini !",
       "subtitle": "Paramètres sauvegardés",
       "desc": "Vous pouvez changer ces options dans le menu"
     }
@@ -44,11 +45,11 @@
     "sendingsubtitle": "patienter",
     "sent": "succès !",
     "errorsent": "Erreur !",
-    "errorsentsubtitle": "désolé réessayer",
+    "errorsentsubtitle": "Désolé réessayer",
     "sentsubtitle": "Mail envoyé"
   },
   "Home": {
-    "Tagline":"Webdesigner & developer",
+    "Tagline":"Webdesigner & developer from outer space",
     "MenuContentHome":
       [
         "Références",
@@ -58,33 +59,36 @@
       ]
     ,
     "SectionGenesis": {
-      "TitleGenesis": "Genesis",
-      "BtnDownload": "Envie d'une collaboration ?",
-      "BtnMore": "more about me",
+      "TitleGenesis": "Bienvenue",
+      "BtnDownload": "Une collaboration ?",
+      "BtnMore": "En savoir plus",
       "ParaphGenesis": [
         {
-          "txt":
-            "Hi, i’m Jérémy. A 27 years old French webdesigner & developer."
+          "txt": "Bonjour je suis Jérémy, un webdesigner et développeur autodidacte"
         },
         {
           "txt":
-            "I’m actually focusing on learning webApps development and combine it with my experience <br /> in design and animation to build high interactive interfaces."
+            "Je me perfectionne sur le développement de <a href='https://en.wikipedia.org/wiki/Single-page_application' tabindex='-1' target='_blank'>single-page application</a> avec les derniers frameworks dont le web dispose et utilise mes années d'experience en tant que web et motion designer pour rendre le tout beau et vivant"     
         },
         {
           "txt":
-            "This website is developped with <a href='https://reactjs.org/' tabindex='-1' target='_blank'>React</a> and <a href='https://redux.js.org/' tabindex='-1' target='_blank'>Redux</a>"
+            "Je focus mon apprentissage sur <a href='https://reactjs.org/' tabindex='-1' target='_blank'>ReactJS</a> la célèbre librairie de Facebook. React permet un rendu d'interface dynamique avec des composants tout en étant très rapide."
         },
         {
           "txt":
-            "Animations are powered by <a href='https://greensock.com/gsap' tabindex='-1' target='_blank'>GSAP</a> & Webgl by <a href='http://www.pixijs.com/' tabindex='-1' target='_blank'>PixiJS</a>"
+            "J'ai tendance à ne pas limiter mon envie d'apprendre à un seul job et à étendre mes connaissances du front au back-end."
+        },
+        {
+          "txt":
+            "Mon but ultime est de proposer des experiences immersives qui ont du sens tout en étant belles et efficaces."
         }
       ]
     },
     "SectionProject": {
-      "Title": "Past work",
+      "Title": "Références",
       "Paraph": [
         {
-          "txt": "I've work several years for video game and movie licenses"
+          "txt": "Licenses sur lesquelles j'ai travaillé."
         }
       ]
     }

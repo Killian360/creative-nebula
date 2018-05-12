@@ -18,6 +18,7 @@
     "Panel1": {
       "title": "Welcome",
       "subtitle": "Choose your language",
+      "desc": "This website use cookies to save your settings",
       "choice1": "Français",
       "choice2": "English"
     },
@@ -49,7 +50,7 @@
     "sentsubtitle": "Mail sent"
   },
   "Home": {
-    "Tagline":"Webdesigner & developer",
+    "Tagline":"Webdesigner & developer from outer space",
     "MenuContentHome":
       [
         "React + Redux",
@@ -72,7 +73,7 @@
         },
         {
           "txt":
-            "Actually focusing my studies on <a href='https://reactjs.org/' tabindex='-1' target='_blank'>ReactJS</a> the popular library from Facebook. React render only the components the interface state need with very high performance."
+            "Actually focusing my studies on <a href='https://reactjs.org/' tabindex='-1' target='_blank'>ReactJS</a> the popular library from Facebook. React render components dynamically with high performances."
         },
         {
           "txt":
@@ -80,7 +81,7 @@
         },
         {
           "txt":
-            "I ultimetly want to provide immersive and meaningfull web experiences that are beautiful and effective"
+            "I ultimately want to provide immersive and meaningful web experiences, both beautiful and effective."
         }
       ]
     },
