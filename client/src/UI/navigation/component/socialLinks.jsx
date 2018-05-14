@@ -11,6 +11,7 @@ const theme = createMuiTheme({
     MuiIconButton: { // Name of the component ⚛️ / style shee
       root: { // Name of the rule
         height: '100%', // Some CSS
+
       },
     },
     MuiTouchRipple: { // Name of the component ⚛️ / style shee
@@ -18,7 +19,18 @@ const theme = createMuiTheme({
         overflow: 'visible', // Some CSS
       },
     },
+  MuiSwitch: {
+    icon:{
+      backgroundColor:'#8974ff'
+    },
+    iconChecked:{
+      backgroundColor:'#FFFFFF'
+    },
+    bar:{
+      backgroundColor:'#8974ff'
+    },
   },
+},
   palette: {
     primary: {
       // light: will be calculated from palette.primary.main,
@@ -98,8 +110,8 @@ class SocialLinks extends React.Component {
     <div className="InfoPerso">
     <span>
       <li className="InfoPersoMain">I do freelance</li>
-      <li className="InfoPersoSub">+33 6 25 77 75 48</li>
-      <li className="InfoPersoSub">jeremy.charras@gmail.com</li>
+      <a href="callto://+33625777548" rel="noopener noreferrer"><li className="InfoPersoSub">+33 6 25 77 75 48</li></a>
+      <a href="mailto:jeremy.charras@gmail.com" rel="noopener noreferrer"><li className="InfoPersoSub">jeremy.charras@gmail.com</li></a>
       </span>
     </div>
     <div className="SocialLink--Link">

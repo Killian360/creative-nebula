@@ -16,6 +16,7 @@ export const animation = (animName, topdata, delaydata, direction, history) => {
   );
   var MenuBtn = document.getElementById("MenuBtn");
   var menuTag = document.getElementsByClassName("menuTag");
+  var closeTag = document.getElementsByClassName("closeTag");
   var contentViewer = document.getElementById("contentViewer");
   var scene = document.getElementById("scene");
 
@@ -159,6 +160,7 @@ export const animation = (animName, topdata, delaydata, direction, history) => {
       TweenMax.set("#RSLinks", { y:20, opacity:0 });
       TweenMax.to(MenuBtn, 0.2, { top: "1.5vw", ease: Power1.easeOut });
       TweenMax.to(menuTag, 0.2, { opacity: 0, x: -20, ease: Power1.easeOut });
+      TweenMax.to(closeTag, 0.2, { opacity: 1, x: -20, ease: Power1.easeOut });
       TweenMax.staggerTo(".NavTitle",0.3, { y:0 , opacity:1, delay:0.2, ease:Power4.easeOut}, 0.1);
       TweenMax.to("#RSLinks",0.45, { y:0, opacity:1 ,delay:0.3, ease:Power4.easeOut});
 
@@ -203,6 +205,7 @@ export const animation = (animName, topdata, delaydata, direction, history) => {
         delay: delaydata + delaydata + delaydata + 0.2
       });
       // TweenMax.to(contentViewer,0.4,{filter:"blur(0px) hue-rotate(0deg)",delay:delaydata, ease: Power1.easeOut});
+      TweenMax.to(closeTag, 0.2, { opacity: 0, x: 20,delay: delaydata + delaydata, ease: Power1.easeOut });
       TweenMax.to(menuTag, 0.2, {
         opacity: 1,
         x: 0,
@@ -253,6 +256,7 @@ export const animation = (animName, topdata, delaydata, direction, history) => {
         delay: delaydata,
         ease: Power1.easeOut
       });
+      TweenMax.to(closeTag, 0.2, { opacity: 0, x: 20,delay: delaydata + delaydata, ease: Power1.easeOut });
       TweenMax.to(menuTag, 0.2, {
         opacity: 1,
         x: 0,

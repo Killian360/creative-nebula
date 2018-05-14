@@ -17,6 +17,7 @@ class Panel extends React.Component {
         this.clickaction = false;
         this.desactivationclick = this.desactivationclick.bind(this);
         this.homeOn = false;
+        this.TrackMouse = this.TrackMouse.bind(this);
         this.state = {
           homeHover:false
         }
@@ -24,7 +25,22 @@ class Panel extends React.Component {
 
     componentDidMount()
     {
-    animate.animation("PanelOpen");
+      animate.animation("PanelOpen");
+    const wrapperWidth = document.getElementById('TransitionWrapperNav').getBoundingClientRect().width;
+    TweenMax.set("#TransitionWrapperNav",{height:wrapperWidth,display:'none'});
+    TweenMax.set("#TransitionWrapperNav",{scale:0, delay:0.1});
+    window.addEventListener("mousemove", this.TrackMouse);
+  }
+
+  TrackMouse(e)
+  {
+          this.MouseX = e.clientX;
+          this.MouseY = e.clientY;
+  }
+
+  componentWillUnmount()
+  {
+    window.removeEventListener('mousemove', this.TrackMouse);
   }
 
     pulseReapeat() {
@@ -47,6 +63,8 @@ class Panel extends React.Component {
     
   switchRoute(URL, direction) {
     if (this.clickaction === false) {
+      TweenMax.set("#TransitionWrapperNav",{x:this.MouseX, y:this.MouseY,xPercent:'-50', yPercent:'-50', display:'block', opacity:0.25,transformOrigin:'center center'});
+      TweenMax.to("#TransitionWrapperNav",0.2,{scale:0.3, display:"none",opacity:0});
       this.clickaction = true;
       store.dispatch({ type: "NAVIGATIONWhite" });
       this.setState({ theme: store.getState().NAVIGATIONTHEME });
@@ -135,6 +153,8 @@ desactivationclick() {
                 </div>
           </nav>
           <SocialLinks />
+          <div id="TransitionWrapperNav">
+          </div>
         </div>
     )
 }

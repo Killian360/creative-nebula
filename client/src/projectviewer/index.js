@@ -370,7 +370,12 @@ class Header extends React.Component {
           DatasProject = store.getState().LANG.JsonProjects.projets[store.getState().SLIDE.slide+1];
           this.props.history.push(DatasProject.id);
         }
+        for (var i = 0; i < store.getState().LANG.JsonProjects.projets.length; i++) {
+          if (store.getState().LANG.JsonProjects.projets[i].id === DatasProject.id) {
+            store.dispatch({type: 'getSlide', text: i});
       }
+      }
+    }
 
   swipingRight(e, deltaX, deltaY, absX, absY, velocity)
   {
@@ -393,6 +398,11 @@ switchPropsRIght()
         DatasProject = store.getState().LANG.JsonProjects.projets[store.getState().SLIDE.slide-1];
           this.props.history.push(DatasProject.id);
       }
+      for (var i = 0; i < store.getState().LANG.JsonProjects.projets.length; i++) {
+        if (store.getState().LANG.JsonProjects.projets[i].id === DatasProject.id) {
+          store.dispatch({type: 'getSlide', text: i});
+    }
+  }
     }
 
 swiping(e, deltaX, deltaY, absX, absY, velocity)

@@ -111,6 +111,9 @@ class NavPanel extends React.Component {
           <span className={"menuTag " + this.state.theme}>
             {store.getState().LANG.JsonLang.menu.MenuTag}
           </span>
+          <span className={"closeTag " + this.state.theme}>
+            {store.getState().LANG.JsonLang.menu.MenuTagClose}
+          </span>
           <div className="hamburgerContainer">
             <div className={"hamburger " + this.classActive} id="hamburger-11">
               <span className={"line " + this.state.theme} />
