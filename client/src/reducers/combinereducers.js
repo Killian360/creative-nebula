@@ -21,6 +21,7 @@ import NAVIGATIONTHEME from './NAVIGATION_theme.js';
 import WEB_GL_Icon from './WEB_GL_Icons_reducers.js';
 import MailStatus from './MailStatus.js';
 import HOMEPREV_URL from './HOMEPREV_URL';
+import PROJECTISREADING from './PROJECTVIEWER_reading.js';
 
 const rootReducer = combineReducers({
     MUSIC,
@@ -46,7 +47,8 @@ const rootReducer = combineReducers({
     WEB_GL_Icon,
     MailStatus,
     CONTENTHOMESLIDE,
-    HOMEPREV_URL
+    HOMEPREV_URL,
+    PROJECTISREADING
 });
 
 

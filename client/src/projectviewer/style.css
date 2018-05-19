@@ -355,23 +355,25 @@ border-bottom: 4px solid #FFF;
   display:flex;
   box-sizing: border-box;
   width:100%;
+  height:100vh;
   left:0;
   right:0;
   position:relative;
-  margin:auto;
   z-index:10;
   margin-top:0;
-  max-width:1200px;
+  margin:auto;
+  max-width:1400px;
 }
-
-
 
 .ProjectDescription
 {
-  width:50%;
+  width:35%;
   color:#e5f5ff;
 font-family: "Radiance";
 line-height:1.5;
+top:50%;
+position:absolute;
+transform: translateY(-50%);
 }
 
 .ProjectRole
@@ -383,16 +385,18 @@ line-height:1.5;
 box-sizing: border-box;
 }
 
-.ProjectRole h1
+.ProjectDescription h2
 {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: .05em;
   margin-top:0;
-  color:#FFF;
+  color:#b3a6ff;
   font-size: 1.5em;
-  margin-bottom:1rem;
+  margin-bottom:0.75rem;
+  margin-top:0.75rem;
   font-family: "Radiance";
+  text-align: left;
 }
 
 .BackTagBtn.whiteNav
@@ -428,13 +432,14 @@ color:#06197b;
   text-transform: uppercase;
   letter-spacing: .05em;
   margin-top:0;
-  font-size: 3.4em;
+  font-size: 5.4em;
   color:#FFF;
   margin-bottom:1rem;
+  line-height: 4rem;
   font-family: "Radiance";
 }
 
-.ProjectRole p
+.ProjectDescription h3
 {
   font-weight: 300;
   letter-spacing: .05em;
@@ -451,6 +456,8 @@ color:#06197b;
   margin-top:0;
   font-size: 2.2em;
   font-family: "Radiance";
+  margin-bottom:5vh;
+  opacity: 0.8;
 }
 
 #navbarviewer--bg
@@ -555,11 +562,20 @@ overflow-x: hidden !important;
   color:#FFF;
 }
 
+.ProjectContent
+{
+  position:absolute;
+  top:0;
+width:100%;
+height:100%;  
+}
+
 #ProjectContainer
 {
   position:absolute;
   width:100%;
-  top:calc(125vh + 200px);
+  /* top:calc(125vh + 200px); */
+  top:0;
   color:#FFF;
   background-position: 50% 0%;
   background-repeat: repeat-x;
@@ -567,9 +583,13 @@ overflow-x: hidden !important;
   left:0;
   right:0;
   min-height:1000px;
-  opacity:0;
   z-index:2;
   margin-top:0;
+}
+
+.ReadingMode
+{
+  visibility:visible !important;
 }
 
 @media (max-width: 1000px) {
@@ -605,7 +625,6 @@ overflow-x: hidden !important;
 
 #iframeContainer
 {
-  opacity:0;
   background-color:#FFF;
   margin-top:70px;
   overflow:hidden;

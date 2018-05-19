@@ -239,7 +239,7 @@ class Home extends React.Component {
     
     if (this.props.match.url==="/" && this.slideNbr!==prevProps.slideNbr && this.slideNbr>=2)
     {
-      this.props.history.push("/content/React+Redux");
+      this.props.history.push("/content/Technologies");
     }
 
     // if (this.props.match.params.contentID!= prevProps.match.params.contentID)
@@ -333,7 +333,7 @@ class Home extends React.Component {
               onScrollStop={this.handleScrollStop.bind(this)}
               onScrollStart={this.handleScrollStart.bind(this)}
               >
-              <SectionReactRedux IndexID="React+Redux"/>
+              <SectionReactRedux IndexID="Technologies"/>
               <SectionProject IndexID="References"/>
               <SectionClients IndexID="Clients"/>
               <SectionClients IndexID="test3" Title="test3"/>

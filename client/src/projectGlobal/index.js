@@ -401,12 +401,6 @@ changeURL(ID)
                </svg>
              </div>
            </div> */}
-           <div className="projectTitle">
-             <span className="TitleGradient">
-               {store.getState().LANG.JsonLang.menu.Titleprojects}
-             </span>
-             <span className="SubTitle">{store.getState().LANG.JsonLang.menu.SubtitleProjects}</span>
-           </div>
            <NavCategories ref={ProjectScrollbar.ref}></NavCategories>
          </div>
          <ProjectScrollbar
@@ -420,6 +414,12 @@ changeURL(ID)
            autoHideTimeout={500}
            autoHideDuration={200}
            >
+                    <div className="projectTitle">
+             <span className="TitleGradient">
+               {store.getState().LANG.JsonLang.menu.Titleprojects}
+             </span>
+             <span className="SubTitle">{store.getState().LANG.JsonLang.menu.SubtitleProjects}</span>
+           </div>
              <div id="gradientOver"></div>
              <div id="fakezone"></div>
            <div id="projectFrame">
@@ -442,7 +442,9 @@ changeURL(ID)
                <div className="OverflowMask">
                  <div className={"BGImg "+ o.id} style={{backgroundImage: "url(" + o.thumbBG + ")"}}></div>
                  <div className={"InfoBox "+ o.id}>
-                <span className={"InfoContent " + o.id}>go to project</span>
+                <span className={"InfoContentType " + o.id}>{o.client}</span>
+                <span className={"InfoContent " + o.id}>{o.key1}</span>
+                <svg x="0px" y="0px" className="InfoContentSVG" viewBox="0 0 31.494 31.494"><path transform="scale(-1) translate(-31.494,-31.494)" d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554  c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587  c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z" fill="#FFFFFF"></path></svg>
               </div>
                  <div className={"thumb-highlight " + o.id}></div>
                </div>

@@ -23,7 +23,6 @@
 list-style: none;
 margin:auto;
 right:0;
-margin-top:2vw;
 pointer-events: none;
 display:inline;
 width:100%;
@@ -35,7 +34,7 @@ position: absolute;
 .NavBtn
 {
 font-size:0.8em;
-margin-left:15%;
+margin-left:5vw;
 position:relative;
 }
 
@@ -59,7 +58,7 @@ position:relative;
 
 .NavUL li
 {
-  padding:15px;
+  padding:19px;
   padding-right:0;
   padding-left:0;
   margin-top:2px;
@@ -72,7 +71,8 @@ position:relative;
    opacity:0;
     float:left;
     display:none;
-    margin-top:10px;
+    margin-top:0px;
+    margin-bottom:4px;
       pointer-events: auto;
 }
 
@@ -81,7 +81,7 @@ position:relative;
   opacity:1;
   color:#FFF;
   box-shadow : 0px 0px 60px 0px rgba(7, 128, 240,0.35);
-  border-left : 2px solid #FFF;
+  border-left : 0px solid #FFF;
 }
 
 
@@ -182,5 +182,5 @@ position:relative;
 .NavUL li.desactivated
 {
   opacity:0.5;
-  border-left: 2px solid #4f68ab;
+  border-left: 0px solid #4f68ab;
 }

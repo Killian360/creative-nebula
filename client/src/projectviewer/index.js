@@ -55,29 +55,41 @@ class CustomScrollbars extends React.Component{
           this.isScrolled=false;
           this.scrollingIsUp = false;
           this.state = {mouseInput:""};
-          WheelReact.config({
-            up: () => {
-              this.scrollingIsUp = true;
-              console.log(this.scrollingIsUp);
-            },
-            down: () => {
-              this.scrollingIsUp = false;
-              console.log(this.scrollingIsUp);
-          }
-          });
         }
 
 componentDidMount()
 {
-  TweenMax.to("#ProjectContainer",0.2,{opacity:1, delay:0.2});
+  const scrollbars = this.ScrollbarRef;
+  scrollbars.scrollTop(0);
+
+  TweenMax.set("#ProjectContainer",{opacity:0});
+  TweenMax.to("#ProjectContainer",0.25,{opacity:1});
   TweenMax.to("#contentViewer",0.25,{scale:1,opacity:1,delay:0.2});
   TweenMax.to('#globalgradient',0.15,{css:{filter: ""}});
+
+  
+
 }
 
-handleScrollStop()
+unmountComponent()
 {
+  TweenMax.to("#ProjectContainer",0.2,{opacity:0});
+  TweenMax.to(".gradient_top",0.15,{opacity:1});
+  TweenMax.to(".galleryWrapperProject", 0.25, {scale:1, transformOrigin:"center right", right:"0", left:"0", onComplete:changeMode});
 
+  function changeMode()
+  {
+    var iconScroll = document.getElementsByClassName('ArrowScroll');
+    TweenMax.to(iconScroll,0.2,{opacity:1, y:0, delay:0.1});
+    TweenMax.to("#navigationViewer",0.15,{opacity:1, display:"block"});
+    store.dispatch({ type: 'NAVIGATIONhomeOFF' });
+    TweenMax.killTweensOf(".ButtonNavViewerHome");
+    TweenMax.to(".ButtonNavViewerHome",0.25,{opacity:0,x:-30, display:"none", ease:Power1.easeOut});
+    TweenMax.staggerTo('.SelectorContainer',0.1,{y:0,opacity:1, ease:Power1.easeOut},0.05);
+    store.dispatch({type: 'ReadingOff'});
+  }
 }
+
 
 handleScrollFrame(values)
 {
@@ -99,7 +111,6 @@ handleScrollFrame(values)
   // var navbarviewerBound = document.getElementById('navbarviewer').getBoundingClientRect();
   var ProjectContainerX = ProjectContainer.top;
   var ProjectContentContainerTop = ProjectContentContainer.top;
-  var iconScroll = document.getElementsByClassName('ArrowScroll');
   var iFrameID = document.getElementById('iframeContainer');
   var offset;
   var elementboundCalc;
@@ -133,24 +144,6 @@ if (iFrameID.contentWindow.document.getElementById('ProjectContent')!==null)
 // }
 }
 
-
-  if (top<0.10)
-  {
-    TweenMax.to(iconScroll,0.2,{opacity:1, y:0, delay:0.1});
-    TweenMax.to("#navigationViewer",0.15,{opacity:1});
-    store.dispatch({ type: 'NAVIGATIONhomeOFF' });
-    TweenMax.killTweensOf(".ButtonNavViewerHome");
-    TweenMax.to(".ButtonNavViewerHome",0.25,{opacity:0,x:-30, display:"none", ease:Power1.easeOut});
-    TweenMax.staggerTo('.SelectorContainer',0.1,{y:0,opacity:1, ease:Power1.easeOut},0.05);
-  } else {
-    animate.animation("NavLogoHide",null,null,150);
-    store.dispatch({ type: 'NAVIGATIONhomeON' });
-    TweenMax.to(iconScroll,0.15,{opacity:0, y:-25});
-    TweenMax.to("#navigationViewer",0.45,{opacity:0});
-    TweenMax.staggerTo('.SelectorContainer',0.06,{y:-15,opacity:0,ease:Power1.easeOut},0.04);
-    TweenMax.to(".ButtonNavViewerHome",0.25,{opacity:1,x:0, display:"block", ease:Power1.easeOut});
-  }
-
   if (ProjectContainerX > window.innerHeight/1.5)
   {
     TweenMax.killTweensOf(projectHeader);
@@ -166,8 +159,8 @@ if (iFrameID.contentWindow.document.getElementById('ProjectContent')!==null)
   } else if (ProjectContainerX < window.innerHeight/1.3)
   {
     TweenMax.set(projectHeader,{opacity:projectHeaderScale});
+    TweenMax.set(".galleryWrapperProject",{top:-projectHeaderTranslate});
     TweenMax.set("#project-viewer--maincanvas",{opacity:projectHeaderOpacity, ease:Power1.easeOut});
-    TweenMax.to('#navbarviewer--bg',0.25,{opacity:1, transform:'translateY(0%)'});
   }
 
 
@@ -223,13 +216,13 @@ handleOutTop() {
 handleClickTop() {
   const scrollbars = this.ScrollbarRef;
   scrollbars.scrollTop(0);
+  this.unmountComponent();
 }
 
   render() {
     return (
-      <React.Fragment>
+      <div className="ProjectContent">
       <ProjectScrollbar
-         {...WheelReact.events}
         ref={c => {this.ScrollbarRef = c}}
         renderTrackVertical={props => <div {...props} className="track-vertical-white"/>}
         renderTrackHorizontal={props => <div {...props} style={{display:"none"}}/>}
@@ -247,11 +240,11 @@ handleClickTop() {
         <path d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554  c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587  c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"/>
 </svg>
 </div>
-<span className={"BackTagBtn "+this.props.theme}>{store.getState().LANG.JsonLang.menu.backBtn}</span>
+<span className={"BackTagBtn "+this.props.theme}></span>
 </div>
-        <Content datapreview={this.props.preview} scrollbar={this.ProjectScrollbar}/>
+      <Content datapreview={this.props.preview} scrollbar={this.ProjectScrollbar}/>
       </ProjectScrollbar>
-    </React.Fragment>
+    </div>
     );
   }
 }
@@ -261,7 +254,8 @@ const mapStateToProps = state => {
 PREVIEW: state.PREVIEW,
 LANG: state.LANG,
 NAVIGATIONTHEME: state.NAVIGATIONTHEME,
-SLIDE: state.SLIDE
+SLIDE: state.SLIDE,
+PROJECTISREADING : state.PROJECTISREADING
   }
 }
 
@@ -277,6 +271,7 @@ class ProjectViewer extends React.Component {
     if (this.props.match.params.slide === null || this.props.match.params.slide === undefined ) {
       this.props.match.params.slide  = "middle_earth";
     }
+    store.dispatch({type: 'ReadingOff'});
     var ProjectNbr = this.props.match.params.slide ;
     for (var i = 0; i < store.getState().LANG.JsonProjects.projets.length; i++) {
       if (store.getState().LANG.JsonProjects.projets[i].id === ProjectNbr) {
@@ -287,6 +282,7 @@ class ProjectViewer extends React.Component {
       }
     }
 }
+
 
 componentDidUpdate(prevProps,prevState)
 {
@@ -306,19 +302,16 @@ componentDidUpdate(prevProps,prevState)
 
   componentDidMount(Props) {
     var projectHeader = document.getElementById('projectHeader');
-    var ProjectContainer = document.getElementById('iframeContainer');
     var projectBG = document.getElementById('projectBG');
     TweenMax.fromTo(projectBG, 0.25,{opacity:0},{opacity:1, ease:Power1.easeIn,delay:0.1});
     TweenMax.fromTo(projectHeader, 0.25,{opacity:0},{opacity:1, ease:Power1.easeOut,delay:0.1});
-    TweenMax.fromTo(ProjectContainer, 0.25,{opacity:0},{opacity:1, y:0, ease:Power1.easeOut,delay:0.1});
   }
 
   render() {
     return (
       <div key="ViewerContent"id="contentViewer" className="Maincontainer projectContentTransition">
-        <CustomScrollbars theme={this.props.NAVIGATIONTHEME} preview={this.props.PREVIEW}>
-<Header history={this.props.history}/>
-    </CustomScrollbars>
+      <Header history={this.props.history}/>
+      {store.getState().PROJECTISREADING === true && <CustomScrollbars theme={this.props.NAVIGATIONTHEME} preview={this.props.PREVIEW} />}
       </div>
   );
   }
@@ -329,15 +322,42 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      redirect:false
+      redirect:false,
     }
+    this.isReadingMode=false;
     this.switchPropsRIght = this.switchPropsRIght.bind(this);
     this.switchPropsLeft = this.switchPropsLeft.bind(this);
   }
 
   componentDidMount()
   {
+  WheelReact.config({
+    up: () => {
+      this.isReadingMode === false && this.animationShrink();
+    },
+    down: () => {
   }
+  });
+  }
+
+animationShrink()
+{
+var iconScroll = document.getElementsByClassName('ArrowScroll');
+animate.animation("NavLogoHide",null,null,150);
+store.dispatch({ type: 'NAVIGATIONhomeON' });
+TweenMax.to(iconScroll,0.15,{opacity:0, y:-25});
+TweenMax.to("#navigationViewer",0.45,{opacity:0, display:"none"});
+TweenMax.to(".gradient_top",0.15,{opacity:0});
+TweenMax.to('#navbarviewer--bg',0.25,{opacity:1, transform:'translateY(0%)'});
+TweenMax.to(".galleryWrapperProject", 0.25, {scale:0.45, transformOrigin:"center right", right:"10vw", left:"auto", onComplete:complete, ease:Power1.easeOut});
+function complete()
+{
+  store.dispatch({type: 'ReadingOn'});
+  TweenMax.staggerTo('.SelectorContainer',0.06,{y:-15,opacity:0,ease:Power1.easeOut},0.04);
+  TweenMax.to(".ButtonNavViewerHome",0.25,{opacity:1,x:0, display:"block", ease:Power1.easeOut});
+}
+}
+
 
   shouldComponentUpdate(nextProps)
   {
@@ -417,8 +437,6 @@ swiping(e, deltaX, deltaY, absX, absY, velocity)
      }
   }
 
-
-
 render(){
   return (
     <div>
@@ -432,7 +450,7 @@ render(){
         <div id="ViewerNav">
           <NavigationViewer history={this.props.history}/>
         </div>
-  <section id="projectHeader">
+  <section id="projectHeader" {...WheelReact.events}>
       <ScrollUI ID="scrollProject"/>
       <Parallax/>
   </section>
@@ -519,13 +537,11 @@ handleOut(ID)
       <div className="ProjectDescription">
         <h1>{store.getState().PREVIEW.name}</h1>
         <p>{store.getState().PREVIEW.desc}</p>
+        <h2>Role</h2>
+        <h3>{store.getState().PREVIEW.role}</h3>
+        <h2>Goal</h2>
+        <h3>{store.getState().PREVIEW.client}</h3>
       </div>
-<div className="ProjectRole">
-    <h1>Role</h1>
-    <p>{store.getState().PREVIEW.role}</p>
-    <h1>Client</h1>
-    <p>{store.getState().PREVIEW.client}</p>
-  </div>
     </div>
     <iframe title="project content" src={indexIframe} onLoad={iframeLoaded} id="iframeContainer" scrolling="no"></iframe>
   </section>

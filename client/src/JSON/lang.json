@@ -2,7 +2,7 @@
   "menu": {
     "titleHome": "Home",
     "subtitleHome": "genesis",
-    "Titleprojects": "Projects", 
+    "Titleprojects": "Works", 
     "SubtitleProjects": "glimpse of the past",
     "titleAbout": "About",
     "subtitleAbout": "Aboutabout",
@@ -53,7 +53,7 @@
     "Tagline":"Webdesigner & developer from outer space",
     "MenuContentHome":
       [
-        "React + Redux",
+        "Technologies",
         "References",
         "Clients",
         "Whatevar"
@@ -82,6 +82,52 @@
         {
           "txt":
             "I ultimately want to provide immersive and meaningful web experiences, both beautiful and effective."
+        }
+      ]
+    },
+    "SectionTechno": {
+      "Title": "Technologies",
+      "Paraph": [
+        {
+          "txt": "Some technologies i use."
+        }
+      ],
+      "Content": [
+        {
+          "Title": "React",
+          "Desc": "Popular view library from Facebook to create interfaces.",
+          "Link": "<a href='https://reactjs.org/' target='_blank'>Learn More</a>",
+          "Icon":""
+        },
+        {
+          "Title": "Redux",
+          "Desc": "State management library for React and others view library",
+          "Link": "<a href='https://redux.js.org/' target='_blank'>Learn More</a>",
+          "Icon":""
+        },
+        {
+          "Title": "NodeJS",
+          "Desc": "JavaScript runtime built on Chrome's V8 JavaScript engine.",
+          "Link": "<a href='https://nodejs.org/en/' target='_blank'>Learn More</a>",
+          "Icon":""
+        },
+        {
+          "Title": "PixiJS",
+          "Desc": "One of the fastest 2D WebGL renderer.",
+          "Link": "<a href='http://www.pixijs.com/' target='_blank'>Learn More</a>",
+          "Icon":""
+        },
+        {
+          "Title": "Express",
+          "Desc": "Web application framework for NodeJS to create API",
+          "Link": "<a href='http://expressjs.com/' target='_blank'>Learn More</a>",
+          "Icon":""
+        },
+        {
+          "Title": "GSAP",
+          "Desc": "Greensock framework provide fast and smooth animations for the web",
+          "Link": "<a href='https://greensock.com/gsap' target='_blank'>Learn More</a>",
+          "Icon":""
         }
       ]
     },

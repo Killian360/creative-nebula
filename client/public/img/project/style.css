@@ -30,12 +30,11 @@ overflow: hidden;
 	left:0;
 	right:0;
 	margin:auto;
-	max-width:1200px;
+	max-width:1400px;
 }
 
 .text
  {
-max-width:1350px;
   color:#06197b;
   position:relative;
   font-size: 2.2em;

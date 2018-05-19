@@ -354,7 +354,7 @@ iframe {
   margin: auto;
   height: auto;
   top: 0;
-  margin-top:calc(10vh + 60px);
+  margin-top:calc(10vh + 30px);
   max-width:1200px;
   text-align:center;
 }
@@ -464,12 +464,7 @@ a:hover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  /* user-select: none; */
 }
 
 .Maincontainer {
@@ -484,7 +479,7 @@ a:hover {
   background-position: center;
   background-repeat: no-repeat;
   position:relative;
-  user-select: none;
+  /* user-select: none; */
 }
 
 #HomeContainerProjects_title {
@@ -673,6 +668,76 @@ a:hover {
   max-width: 1260px;
   height: 9vh;
   min-height: 80px;
+}
+
+.ContentTechno
+{
+  width:100%;
+  margin-top: calc(4% + 15px);
+  display:flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.TechnoContainer
+{
+  width:calc(50% - 40px);
+  margin-bottom: calc(2% + 20px);
+  position: relative;  
+}
+
+.TechnoContainer h1
+{
+  font-size: 2.5em;
+  color: #FFF;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+  font-family: "Radiance";
+  text-align: left;
+}
+
+.TechnoContent
+{
+  margin-left:15%;
+  width:85%;
+}
+
+.TechnoIcon
+{
+  position:absolute;
+  height:100%;
+  width:15%;
+}
+
+.TechnoLink a
+{
+  color: #725bf7;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+  font-family: "Radiance";
+  text-align: left;
+  cursor:pointer;
+  text-align: left;
+  margin-top:10px;
+  left:0;
+  transition: all 0.25s ease-out;
+}
+
+.TechnoLink a:hover
+{
+  color:#b3a6ff;
+}
+
+
+.TechnoContainer h2
+{
+  font-size: 2.1em;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+  font-family: "Radiance";
+  text-align: left;
 }
 
 .button_download {

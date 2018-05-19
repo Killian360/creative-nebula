@@ -51,7 +51,7 @@ export const animation = (animName, ID, direction, callback) => {
       TweenMax.set(infofilm, {transform:'scale(0)'});
       TweenMax.set(infogame, {transform:'scale(0)'});
       TweenMax.set(infoBoxLosange,{transform:'rotate(45deg) scale(0)'});
-      TweenMax.to(InfoBox, 0.35, {top:'86%',transform:"skewY(1.3deg)", ease: Power2.easeOut});
+      TweenMax.to(InfoBox, 0.35, {top:'86%',transform:"skewY(2deg)", ease: Power2.easeOut});
       TweenMax.to(InfoBox, 0.35, {transform:"skewY(0deg)",y:0, delay:0.3, ease: Power2.easeOut});
       TweenMax.fromTo(infocontent, 0.2,{y:"0%"},{y:"-50%", delay:0.2,ease: Power1.easeOut});
       TweenMax.fromTo(InfoClient, 0.2,{y:"0%"},{y:"-50%", delay:0.25,ease: Power1.easeOut});

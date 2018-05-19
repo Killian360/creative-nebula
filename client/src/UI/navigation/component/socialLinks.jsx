@@ -109,8 +109,8 @@ class SocialLinks extends React.Component {
   <div >
     <div className="InfoPerso">
     <span>
-      <li className="InfoPersoMain">I do freelance</li>
-      <a href="callto://+33625777548" rel="noopener noreferrer"><li className="InfoPersoSub">+33 6 25 77 75 48</li></a>
+      <li className="InfoPersoMain">Want to work with me ?</li>
+      <a href="callto://+33625777548" rel="noopener noreferrer"><li className="InfoPersoSub">+33(0)6 25 77 75 48</li></a>
       <a href="mailto:jeremy.charras@gmail.com" rel="noopener noreferrer"><li className="InfoPersoSub">jeremy.charras@gmail.com</li></a>
       </span>
     </div>

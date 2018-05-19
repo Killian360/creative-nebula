@@ -50,8 +50,8 @@ class Title extends React.Component {
 
 componentWillLeave(callback)
 {
-  TweenMax.to(".title.White",0.25,{opacity:0, ease:Power1.easeOut});
-  TweenMax.to(".ParagraphWhite",0.25,{opacity:0,ease:Power1.easeOut, onComplete:callback});
+  TweenMax.to("#content-References .title.White",0.25,{opacity:0, ease:Power1.easeOut});
+  TweenMax.to("#content-References .ParagraphWhite",0.25,{opacity:0,ease:Power1.easeOut, onComplete:callback});
 }
 
   shouldComponentUpdate(prevProps)
