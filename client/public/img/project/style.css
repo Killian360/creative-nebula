@@ -26,16 +26,16 @@ overflow: hidden;
 
 #ProjectContent
 {
-	width:85%;
+	width:100%;
 	left:0;
 	right:0;
 	margin:auto;
-	max-width:1400px;
 }
 
 .text
  {
   color:#06197b;
+  width:85%;
   position:relative;
   font-size: 2.2em;
   font-family: 'Radiance', sans-serif;
@@ -48,6 +48,7 @@ overflow: hidden;
   opacity:0;
   transform: scale(0.9);
   letter-spacing: .05em;
+	max-width:1400px;
 
 }
 

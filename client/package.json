@@ -21,6 +21,7 @@
     "pixi.js": "^4.7.3",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
+    "react-addons-transition-group": "^15.6.2",
     "react-bootstrap": "^0.31.5",
     "react-cookie": "^2.1.4",
     "react-custom-scroll": "^3.1.0",

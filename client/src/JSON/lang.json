@@ -50,7 +50,7 @@
     "sentsubtitle": "Mail sent"
   },
   "Home": {
-    "Tagline":"Webdesigner & developer from outer space",
+    "Tagline":"Webdesign & developement",
     "MenuContentHome":
       [
         "Technologies",
@@ -65,7 +65,7 @@
       "BtnMore": "learn more about me",
       "ParaphGenesis": [
         {
-          "txt": "Hi I'm Jeremy, a self taught webdesigner & developer."
+          "txt": "Hi I'm Jeremy, a self taught senior webdesigner & developer."
         },
         {
           "txt":
@@ -89,7 +89,7 @@
       "Title": "Technologies",
       "Paraph": [
         {
-          "txt": "Some technologies i use."
+          "txt": "Some of the best technologies I use, from front to back-end."
         }
       ],
       "Content": [
@@ -97,37 +97,49 @@
           "Title": "React",
           "Desc": "Popular view library from Facebook to create interfaces.",
           "Link": "<a href='https://reactjs.org/' target='_blank'>Learn More</a>",
-          "Icon":""
+          "Icon":"../img/home/ico/react.svg"
         },
         {
           "Title": "Redux",
-          "Desc": "State management library for React and others view library",
+          "Desc": "A predictable state container for JavaScript apps.",
           "Link": "<a href='https://redux.js.org/' target='_blank'>Learn More</a>",
-          "Icon":""
+          "Icon":"../img/home/ico/redux.svg"
         },
         {
           "Title": "NodeJS",
           "Desc": "JavaScript runtime built on Chrome's V8 JavaScript engine.",
           "Link": "<a href='https://nodejs.org/en/' target='_blank'>Learn More</a>",
-          "Icon":""
+          "Icon":"../img/home/ico/node.svg"
         },
         {
           "Title": "PixiJS",
           "Desc": "One of the fastest 2D WebGL renderer.",
           "Link": "<a href='http://www.pixijs.com/' target='_blank'>Learn More</a>",
-          "Icon":""
+          "Icon":"../img/home/ico/pixi.svg"
         },
         {
           "Title": "Express",
-          "Desc": "Web application framework for NodeJS to create API",
+          "Desc": "Web application framework for NodeJS.",
           "Link": "<a href='http://expressjs.com/' target='_blank'>Learn More</a>",
-          "Icon":""
+          "Icon":"../img/home/ico/expressjs.svg"
         },
         {
           "Title": "GSAP",
-          "Desc": "Greensock framework provide fast and smooth animations for the web",
+          "Desc": "Greensock framework provide fast and smooth animations for the web.",
           "Link": "<a href='https://greensock.com/gsap' target='_blank'>Learn More</a>",
-          "Icon":""
+          "Icon":"../img/home/ico/greensock.svg"
+        },
+        {
+          "Title": "SASS",
+          "Desc": "CSS preprocessor which adds special features such as variables, nested rules and mixins.",
+          "Link": "<a href='https://greensock.com/gsap' target='_blank'>Learn More</a>",
+          "Icon":"../img/home/ico/sass.svg"
+        },
+        {
+          "Title": "GIT",
+          "Desc": "A version control system that allows people across the world to collaborate on projects.",
+          "Link": "<a href='https://greensock.com/gsap' target='_blank'>Learn More</a>",
+          "Icon":"../img/home/ico/git.svg"
         }
       ]
     },
@@ -135,7 +147,44 @@
       "Title": "References",
       "Paraph": [
         {
-          "txt": "Some licenses i've worked on."
+          "txt": "Projects I've worked on in agency the past few years."
+        }
+      ]
+    },
+    "SectionClient": {
+      "Title": "Clients",
+      "Paraph": [
+        {
+          "txt": "They have join the nebula and you ?"
+        }  
+      ],
+      "Clients": [
+        {
+          "Icon": "../img/home/clients/Blizzard_Entertainment_Logo.svg"
+        },
+        {
+          "Icon": "../img/home/clients/Universal-Pictures-Logo.svg"
+        },
+        {
+          "Icon": "../img/home/clients/Warner_Bros._Games_Print.svg"
+        },
+        {
+          "Icon": "../img/home/clients/StudioCanal.svg"
+        },
+        {
+          "Icon": "../img/home/clients/playstation.svg"
+        },
+        {
+          "Icon": "../img/home/clients/20th_Century_Fox_Logo.svg"
+        },
+        {
+          "Icon": "../img/home/clients/EuropaCorp_Logo.svg"
+        },
+        {
+          "Icon": "../img/home/clients/BANDAI_NAMCO_logo.svg"
+        },
+        {
+          "Icon": "../img/home/clients/Disney.svg"
         }
       ]
     }

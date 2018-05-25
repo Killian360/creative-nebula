@@ -354,7 +354,7 @@ border-bottom: 4px solid #FFF;
 	margin-top:50px;
   display:flex;
   box-sizing: border-box;
-  width:100%;
+  width:85%;
   height:100vh;
   left:0;
   right:0;
@@ -367,7 +367,7 @@ border-bottom: 4px solid #FFF;
 
 .ProjectDescription
 {
-  width:35%;
+  width:100%;
   color:#e5f5ff;
 font-family: "Radiance";
 line-height:1.5;
@@ -577,6 +577,7 @@ height:100%;
   /* top:calc(125vh + 200px); */
   top:0;
   color:#FFF;
+  background-color: rgba(14, 0, 130,0.95);
   background-position: 50% 0%;
   background-repeat: repeat-x;
   margin:auto;
@@ -626,6 +627,6 @@ height:100%;
 #iframeContainer
 {
   background-color:#FFF;
-  margin-top:70px;
+  margin-top:0px;
   overflow:hidden;
 }

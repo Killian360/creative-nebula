@@ -148,7 +148,7 @@ let delay = 0;
 
      componentDidMount()
      {
-      TweenMax.to('#globalgradient',0.15,{css:{filter: ""}});
+      TweenMax.to('#globalgradient',0.15,{css:{backgroundImage: ""}});
        this.appear = true;
        store.dispatch({type: 'NAVIGATIONON'});
        store.dispatch({type: 'NAVIGATIONWhite'});

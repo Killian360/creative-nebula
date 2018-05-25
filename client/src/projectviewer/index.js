@@ -62,20 +62,17 @@ componentDidMount()
   const scrollbars = this.ScrollbarRef;
   scrollbars.scrollTop(0);
 
-  TweenMax.set("#ProjectContainer",{opacity:0});
-  TweenMax.to("#ProjectContainer",0.25,{opacity:1});
+  TweenMax.set("#ProjectContainer",{opacity:1, transform:"translateY(100vh) skewY(10deg)"});
+  TweenMax.to("#ProjectContainer",0.65,{opacity:1, transform:"translateY(0vh) skewY(0deg)", ease:Power4.easeOut});
   TweenMax.to("#contentViewer",0.25,{scale:1,opacity:1,delay:0.2});
   TweenMax.to('#globalgradient',0.15,{css:{filter: ""}});
-
-  
-
 }
 
 unmountComponent()
 {
   TweenMax.to("#ProjectContainer",0.2,{opacity:0});
   TweenMax.to(".gradient_top",0.15,{opacity:1});
-  TweenMax.to(".galleryWrapperProject", 0.25, {scale:1, transformOrigin:"center right", right:"0", left:"0", onComplete:changeMode});
+  TweenMax.to(".galleryWrapperProject", 0.25, {scale:1, transformOrigin:"center right", right:"0", left:"0", opacity:1, filter:"blur(0px)", onComplete:changeMode});
 
   function changeMode()
   {
@@ -84,7 +81,6 @@ unmountComponent()
     TweenMax.to("#navigationViewer",0.15,{opacity:1, display:"block"});
     store.dispatch({ type: 'NAVIGATIONhomeOFF' });
     TweenMax.killTweensOf(".ButtonNavViewerHome");
-    TweenMax.to(".ButtonNavViewerHome",0.25,{opacity:0,x:-30, display:"none", ease:Power1.easeOut});
     TweenMax.staggerTo('.SelectorContainer',0.1,{y:0,opacity:1, ease:Power1.easeOut},0.05);
     store.dispatch({type: 'ReadingOff'});
   }
@@ -143,24 +139,9 @@ if (iFrameID.contentWindow.document.getElementById('ProjectContent')!==null)
 //   }
 // }
 }
-
-  if (ProjectContainerX > window.innerHeight/1.5)
+if (ProjectContainerX < window.innerHeight/1.3)
   {
-    TweenMax.killTweensOf(projectHeader);
-    TweenMax.set(projectHeader,{opacity:projectHeaderScale});
-  }
-
-  if (ProjectContainerX > window.innerHeight/1.15)
-  {
-    TweenMax.set("#project-viewer--maincanvas",{opacity:projectHeaderOpacity, ease:Power1.easeOut});
-    TweenMax.set("#work-maincanvas",{opacity:projectBackgroundOpacity*1.4, ease:Power1.easeOut});
-    TweenMax.to('#navbarviewer--bg',0.25,{opacity:0,transform:'translateY(-100%)'});
-    // TweenMax.to(navbarviewer,0.20,{opacity:0,height:"10vh"});
-  } else if (ProjectContainerX < window.innerHeight/1.3)
-  {
-    TweenMax.set(projectHeader,{opacity:projectHeaderScale});
     TweenMax.set(".galleryWrapperProject",{top:-projectHeaderTranslate});
-    TweenMax.set("#project-viewer--maincanvas",{opacity:projectHeaderOpacity, ease:Power1.easeOut});
   }
 
 
@@ -214,6 +195,7 @@ handleOutTop() {
 }
 
 handleClickTop() {
+  TweenMax.to(".ButtonNavViewerHome",0.25,{opacity:0,x:-30, display:"none", ease:Power1.easeOut});
   const scrollbars = this.ScrollbarRef;
   scrollbars.scrollTop(0);
   this.unmountComponent();
@@ -345,11 +327,10 @@ animationShrink()
 var iconScroll = document.getElementsByClassName('ArrowScroll');
 animate.animation("NavLogoHide",null,null,150);
 store.dispatch({ type: 'NAVIGATIONhomeON' });
-TweenMax.to(iconScroll,0.15,{opacity:0, y:-25});
+TweenMax.to(iconScroll,0.15,{opacity:0, y:25});
 TweenMax.to("#navigationViewer",0.45,{opacity:0, display:"none"});
-TweenMax.to(".gradient_top",0.15,{opacity:0});
-TweenMax.to('#navbarviewer--bg',0.25,{opacity:1, transform:'translateY(0%)'});
-TweenMax.to(".galleryWrapperProject", 0.25, {scale:0.45, transformOrigin:"center right", right:"10vw", left:"auto", onComplete:complete, ease:Power1.easeOut});
+TweenMax.to('#navbarviewer--bg',0.25,{opacity:1, onComplete:complete, transform:'translateY(0%)'});
+// TweenMax.to(".galleryWrapperProject", 0.25, {filter:"blur(5px)",delay:0.2, transformOrigin:"center right", right:"0vw", left:"auto", ease:Power1.easeOut});
 function complete()
 {
   store.dispatch({type: 'ReadingOn'});

@@ -11,6 +11,7 @@ import SectionTitle from "./sections/SectionTitle";
 import SectionGenesis from "./sections/SectionGenesis";
 import SectionProject from "./sections/SectionProject";
 import SectionClients from "./sections/SectionClients";
+import SectionClient from "./sections/SectionClient";
 import SectionReactRedux from "./sections/SectionReactRedux";
 
 import * as animate from "./animation";
@@ -23,7 +24,8 @@ const mapStateToProps = state => {
   return {
     HOMESLIDE: state.HOMESLIDE,
     NAVIGATIONTHEME: state.NAVIGATIONTHEME,
-    LANG: state.LANG
+    LANG: state.LANG,
+    CONTENTHOMESLIDE: state.CONTENTHOMESLIDE,
   };
 };
 
@@ -108,12 +110,10 @@ class Home extends React.Component {
     // this.props.match.params.contentID === this.NavLang.Clients && TweenMax.to('#globalgradient',0.35,{backgroundImage:this.gradient2});
     const scrollbars = this.scrollbarsRef;
     let TargetBound = document.getElementById("content-"+this.props.match.params.contentID).offsetTop;
+    this.props.match.params.contentID === "Technologies" && store.dispatch({type: 'getContentSlide', text:0});
+    this.props.match.params.contentID === "References" && store.dispatch({type: 'getContentSlide', text:1});
+    this.props.match.params.contentID === "Clients" && store.dispatch({type: 'getContentSlide', text:2});
     scrollbars.scrollTop(TargetBound);
-
-    this.props.match.params.contentID === "React+Redux" && store.dispatch({type: 'getContentSlide', text:1});
-    this.props.match.params.contentID === "References" && store.dispatch({type: 'getContentSlide', text:2});
-
-
     }
     setTimeout(()=>this.isInit=false, 300);
   }
@@ -145,6 +145,7 @@ class Home extends React.Component {
         onComplete: this.animating.bind(this),
         ease: Power3.easeOut
       });
+      store.dispatch({type: 'getContentSlide', text:-1});
       store.dispatch({ type: "getHomeSlide", text: this.slideNbr });
     }
   }
@@ -240,8 +241,15 @@ class Home extends React.Component {
     if (this.props.match.url==="/" && this.slideNbr!==prevProps.slideNbr && this.slideNbr>=2)
     {
       this.props.history.push("/content/Technologies");
+      store.dispatch({type: 'getContentSlide', text:0});
     }
 
+    if (this.props.CONTENTHOMESLIDE !== prevProps.CONTENTHOMESLIDE)
+{
+  this.props.CONTENTHOMESLIDE.contentSlide===0 && TweenMax.to('#globalgradient',0.6,{css:{backgroundImage: "linear-gradient(45deg, rgba(185, 3, 103, 0.8), rgb(14, 0, 130))"}});
+  this.props.CONTENTHOMESLIDE.contentSlide===1 && TweenMax.to('#globalgradient',0.6,{css:{backgroundImage: "linear-gradient(45deg, rgba(0, 5, 160, 0.8), rgb(0, 94, 130))"}});
+  this.props.CONTENTHOMESLIDE.contentSlide===2 && TweenMax.to('#globalgradient',0.6,{css:{backgroundImage: "linear-gradient(45deg, rgba(185, 3, 45, 0.8), rgb(14, 0, 130))"}});
+}
     // if (this.props.match.params.contentID!= prevProps.match.params.contentID)
     // {
     //   this.props.match.params.contentID === this.NavLang.References && TweenMax.to('#globalgradient',0.35,{backgroundImage:this.gradient});
@@ -250,7 +258,7 @@ class Home extends React.Component {
 
     if (this.props.match.params.contentID!= prevProps.match.params.contentID && this.props.match.params.contentID!=null && this.isStartScrolling===false)
     {
-      this.MenuContent.isScrollingActive=false;
+    this.MenuContent.isScrollingActive=false;
     const scrollbars = this.scrollbarsRef;
     let TargetBound = document.getElementById("content-"+this.props.match.params.contentID).offsetTop;
     scrollbars.scrollTop(TargetBound);
@@ -261,7 +269,6 @@ class Home extends React.Component {
   {
     let { scrollTop, top } = values;
     let HueValue = (top*25);
-    TweenMax.to('#globalgradient',0.15,{css:{filter: "hue-rotate("+HueValue+"deg)"}});
 
     TweenMax.to(".menuContentHomeScrollBar",0.15,{scaleY:top});
     if (this.MenuContent!=null && this.MenuContent.isScrollingActive===true && this.isInit===false)
@@ -335,7 +342,7 @@ class Home extends React.Component {
               >
               <SectionReactRedux IndexID="Technologies"/>
               <SectionProject IndexID="References"/>
-              <SectionClients IndexID="Clients"/>
+              <SectionClient IndexID="Clients"/>
               <SectionClients IndexID="test3" Title="test3"/>
               {/* <SectionProject IndexID="Clients" />
               <SectionProject IndexID="chiwawa" />

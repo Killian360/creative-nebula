@@ -2,7 +2,7 @@ import React from "react"
 import Slider from "react-slick"
 import { store } from "../../../reducers/combinereducers.js"
 import "./style.css"
-import { TweenMax, Power3, Power1} from "gsap";
+import { TweenMax, Power3,Power4, Power1} from "gsap";
 import { withRouter } from "react-router";
 import Tilt from 'react-tilt';
 import { NavLink } from 'react-router-dom'
@@ -22,8 +22,8 @@ class SliderIndexProjects extends React.Component {
 
   componentDidMount()
   {
-    TweenMax.set(".SliderWorkWrapper",{opacity:0, y:30});
-    TweenMax.to(".SliderWorkWrapper",0.55,{opacity:1,y:0, delay:0.1, ease:Power1.easeOut});
+    TweenMax.set(".SliderWorkWrapper",{opacity:0, y:300});
+    TweenMax.to(".SliderWorkWrapper",0.65,{opacity:1,y:0, delay:0.1, ease:Power4.easeOut});
     const wrapperWidth = document.getElementById('TransitionWrapper').getBoundingClientRect().width;
     const TransitionWrapper = document.getElementById('TransitionWrapper');
 

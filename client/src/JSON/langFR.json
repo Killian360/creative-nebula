@@ -49,7 +49,7 @@
     "sentsubtitle": "Mail envoyé"
   },
   "Home": {
-    "Tagline":"Webdesigner & developer from outer space",
+    "Tagline":"Webdesign & developement",
     "MenuContentHome":
       [
         "Références",
@@ -64,7 +64,7 @@
       "BtnMore": "En savoir plus",
       "ParaphGenesis": [
         {
-          "txt": "Bonjour je suis Jérémy, un webdesigner et développeur autodidacte"
+          "txt": "Bonjour je suis Jérémy, un senior webdesigner et développeur autodidacte"
         },
         {
           "txt":
@@ -84,11 +84,100 @@
         }
       ]
     },
+    "SectionTechno": {
+      "Title": "Technologies",
+      "Paraph": [
+        {
+          "txt": "Quelques-unes des meilleures technologies que j'utilise, du front au back-end."
+        }
+      ],
+      "Content": [
+        {
+          "Title": "React",
+          "Desc": "Librairie populaire de Facebook pour créer des interfaces",
+          "Link": "<a href='https://reactjs.org/' target='_blank'>En savoir plus</a>",
+          "Icon":"../img/home/ico/react.svg"
+        },
+        {
+          "Title": "Redux",
+          "Desc": "Un container d'état prévisible pour les apps JavaScript.",
+          "Link": "<a href='https://redux.js.org/' target='_blank'>En savoir plus</a>",
+          "Icon":"../img/home/ico/redux.svg"
+        },
+        {
+          "Title": "NodeJS",
+          "Desc": "Environnment JavaScript construit sur le moteur JavaScript V8 de Chrome.",
+          "Link": "<a href='https://nodejs.org/en/' target='_blank'>En savoir plus</a>",
+          "Icon":"../img/home/ico/node.svg"
+        },
+        {
+          "Title": "PixiJS",
+          "Desc": "L'une des plus rapide librairie de rendu webGL 2D.",
+          "Link": "<a href='http://www.pixijs.com/' target='_blank'>En savoir plus</a>",
+          "Icon":"../img/home/ico/pixi.svg"
+        },
+        {
+          "Title": "Express",
+          "Desc": "Framework pour les applications web sous NodeJS.",
+          "Link": "<a href='http://expressjs.com/' target='_blank'>En savoir plus</a>",
+          "Icon":"../img/home/ico/expressjs.svg"
+        },
+        {
+          "Title": "GSAP",
+          "Desc": "Le framework Greensock délivre des animations fluides et rapides pour le web.",
+          "Link": "<a href='https://greensock.com/gsap' target='_blank'>En savoir plus</a>",
+          "Icon":"../img/home/ico/greensock.svg"
+        },
+        {
+          "Title": "SASS",
+          "Desc": "Preprocesseur CSS qui ajoute des nouveautés telles que les variables et mixins.",
+          "Link": "<a href='https://greensock.com/gsap' target='_blank'>En savoir plus</a>",
+          "Icon":"../img/home/ico/sass.svg"
+        },
+        {
+          "Title": "GIT",
+          "Desc": "Système de gestion de versions qui permet aux personnes de collaborer sur des projets.",
+          "Link": "<a href='https://greensock.com/gsap' target='_blank'>En savoir plus</a>",
+          "Icon":"../img/home/ico/git.svg"
+        }
+      ]
+    },
     "SectionProject": {
       "Title": "Références",
       "Paraph": [
         {
           "txt": "Licenses sur lesquelles j'ai travaillé."
+        }
+      ]
+    },
+    "SectionClient": {
+      "Title": "Clients",
+      "Paraph": [
+        {
+          "txt": "They have join the nebula and you ?"
+        }  
+      ],
+      "Clients": [
+        {
+          "Icon": "../img/home/clients/Blizzard_Entertainment_Logo.svg"
+        },
+        {
+          "Icon": "../img/home/clients/Universal-Pictures-Logo.svg"
+        },
+        {
+          "Icon": "../img/home/clients/Warner_Bros._Games_Print.svg"
+        },
+        {
+          "Icon": "../img/home/clients/StudioCanal.svg"
+        },
+        {
+          "Icon": "../img/home/clients/playstation.svg"
+        },
+        {
+          "Icon": "../img/home/clients/20th_Century_Fox_Logo.svg"
+        },
+        {
+          "Icon": "../img/home/clients/EuropaCorp_Logo.svg"
         }
       ]
     }
